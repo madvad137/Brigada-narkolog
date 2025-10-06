@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "GolosText";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("GolosText"), url("/assets/fonts/GolosText-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "GolosText";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("GolosText"), url("/assets/fonts/GolosText-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "GolosText";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("GolosText"), url("/assets/fonts/GolosText-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "GolosText";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("GolosText"), url("/assets/fonts/GolosText-Bold.woff") format("woff");
+}
+
+$mainText:#212121;
+$secondaryText:#757575;
+$white:#fff;
+$indigo:#472080;
+$indigoHover:#5A1F80;
+$indigoInput:#59368C;
+$indigoLight:#F7F3FC;
+$black:#212121;
+$bordeaux:#E51849;
+$bordeauxlight:#FEF3F6;
+$lightGray:#f2f2f2;
+
+$smallRadius:5px;
+$mediumRadius:10px;
+$bigRadius:15px;
+$largeRadius:30px;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: "GolosText";
+    font-weight: 400;
+    font-size: 16px;
+    color: $mainText;
+}
+.container{
+    width: 100%;
+    max-width: 1700px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.primary-btn{
+  color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  font-family: "GolosText";
+  background: $bordeaux;
+  padding: 25px 35px;
+  border-radius: $bigRadius;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover{
+    background: $indigo;
+  }
+}
+
+
+.header{
+    &__top{
+        padding-top: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $lightGray;
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-flexBlock{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            line-height: 140%;
+        }
+        &-flexBlockName{
+            color: $secondaryText;
+        }
+        &-flexBlockValue{
+            & button{
+                padding: 0;
+                margin: 0;
+                background: transparent;
+                color: $mainText;
+                font-family: "GolosText";
+                text-decoration: underline;
+                border: none;
+                overflow: none;
+                font-size: 14px;
+            }
+        }
+    }
+    &__bottom{
+        padding-top: 15px;
+        padding-bottom: 30px;
+        &-inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: $mainText;
+        & p{
+            line-height: 110%;
+            font-weight: 500;
+        }
+    }
+    &__infoBlock{
+        display: flex;
+        align-items: stretch;
+        gap: 35px;
+        &-left{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        &-socials{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          & a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            background: $indigoLight;
+            border-radius: $smallRadius;
+            text-decoration: none;
+          }
+        }
+        &-numberBlock{
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          & a{
+            text-decoration: none;
+            color: $mainText;
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+    }
+    &__nav{
+      &-list{
+        display: flex;
+        align-items: center;
+        gap: 34px;
+      }
+      &-link{
+        text-decoration: none;
+        color: $mainText;
+        transition: all 0.2s linear;
+        &:hover{
+          color: $indigo;
+        }
+      }
+      &-item{
+        &.subitem{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          &::after{
+            content: "";
+            display: block;
+            width: 14px;
+            height: 7px;
+            flex-shrink: 0;
+            background: url("/assets/images/blackArr.svg");
+          }
+        }
+        &.servicesItem{
+          padding: 15px 20px;
+          border: 1px solid $indigo;
+          border-radius: $mediumRadius;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          &:hover{
+            background: $indigoLight;
+            border: 1px solid transparent;
+            & .header__nav-burger div:first-child{
+              width: 100%;
+            }
+            & .header__nav-burger div:last-child{
+              width: 100%;
+            }
+            & .header__nav-link{
+              color: $indigo;
+            }
+          }
+        }
+      }
+      &-burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 15px;
+        gap: 4px;
+        & div{
+          height: 2px;
+          width: 100%;
+          border-radius:10px;
+          background: $indigo;
+          flex-shrink: 0;
+          transition: all 0.2s linear;
+          &:first-child{
+            width: 50%;
+          }
+          &:last-child{
+            width: 50%;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+    &__servicesMenu{
+      cursor:auto;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-radius: $largeRadius;
+      overflow: hidden;
+      background: red;
+      top: 130px;
+      display: flex;
+      &-category{
+        background: $indigoLight;
+        width: 100%;
+        max-width: 607px;
+        padding: 40px 35px;
+        border-radius: $largeRadius;
+      }
+      &-categoryList{
+        display: flex;
+        flex-direction: column;
+      }
+      &-categoryItem{
+        padding: 26px;
+        font-size: 24px;
+        font-weight: 500;
+        transition: all 0.2s linear;
+        background: transparent;
+        border-radius: $mediumRadius;
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          right: 26px;
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $bordeaux;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:hover{
+          background: $white;
+        }
+        &.active{
+          background: $white;
+          &::after{
+            width: 7px;
+            height: 12px;
+            border-radius: 0;
+            background: url('/assets/images/redArr.svg');
+          }
+        }
+      }
+      &-rightBlock{
+        width: 100%;
+        padding: 60px;
+      }
+      &-searchBlock{
+        width: 100%;
+        position: relative;
+        & svg{
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      &-search{
+        width: 100%;
+        padding: 25px 30px;
+        border: 1px solid #EDE9F3;
+        outline: none;
+        border-radius: $bigRadius;
+        color: $secondaryText;
+        font-size: 18px;
+        font-family: "GolosText";
+        &::placeholder{
+          color: $secondaryText;
+          font-size: 18px;
+          font-family: "GolosText";
+        }
+      }
+
+    }
+}
