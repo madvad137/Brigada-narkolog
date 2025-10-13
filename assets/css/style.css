@@ -159,6 +159,12 @@ body {
   color: #E51849;
 }
 
+.site-subtitle {
+  font-size: 16px;
+  color: #757575;
+  line-height: 140%;
+}
+
 @media (max-width: 1200px) {
   .h2-title {
     font-size: 36px;
@@ -167,6 +173,10 @@ body {
 @media (max-width: 850px) {
   .h2-title {
     font-size: 26px;
+  }
+  .site-subtitle {
+    font-size: 14px;
+    line-height: 130%;
   }
 }
 .secondary-btn {
@@ -1731,6 +1741,141 @@ body {
   line-height: 140%;
   margin-bottom: 15px;
 }
+.textBlock ol {
+  counter-reset: section;
+  margin-bottom: 30px;
+}
+.textBlock ol li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 25px;
+  padding-left: 42px;
+  position: relative;
+}
+.textBlock ol li strong {
+  color: #472080;
+  font-weight: 500;
+}
+.textBlock ol li::before {
+  counter-increment: section;
+  content: counter(section);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #472080;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  top: 0;
+  flex-shrink: 0;
+}
+.textBlock__citata {
+  background: #fff;
+  padding: 40px;
+  border-radius: 30px;
+  margin-bottom: 80px;
+}
+.textBlock__citata-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F5F5F5;
+}
+.textBlock__citata-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.textBlock__citata-textSection {
+  padding: 50px 0;
+  position: relative;
+  margin-bottom: 30px;
+}
+.textBlock__citata-sircleBlock {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.textBlock__citata-sircleBlock.top {
+  top: 0;
+  left: 0;
+}
+.textBlock__citata-sircleBlock.top .textBlock__citata-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #FFFFFF, #E51849);
+}
+.textBlock__citata-sircleBlock.bottom {
+  right: 0;
+  bottom: 0;
+  flex-direction: row-reverse;
+}
+.textBlock__citata-sircleBlock.bottom .textBlock__citata-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left, #FFFFFF, #E51849);
+}
+.textBlock__citata-sircle {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E51849;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textBlock__citata-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.textBlock__citata-doctorBlock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.textBlock__citata-nameblock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.textBlock__citata-name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+.textBlock__citata-position {
+  font-size: 14px;
+  color: #757575;
+}
+.textBlock__citata-link {
+  text-decoration: none;
+  color: #212121;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #212121;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.textBlock__citata-link::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: #E51849;
+}
 
 .advantages {
   margin: 80px 0;
@@ -1796,4 +1941,395 @@ body {
   font-weight: 400;
   color: #757575;
   line-height: 140%;
+}
+
+.purpleForm {
+  position: relative;
+  padding: 40px;
+  background: #472080;
+  color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+.purpleForm__formBlock {
+  max-width: 650px;
+}
+.purpleForm__formBlock-title {
+  font-size: 44px;
+  line-height: 110%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.purpleForm__formBlock-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+.purpleForm__formBlock-checkboxBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.purpleForm__formBlock-checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.purpleForm__formBlock-checkbox:hover {
+  background: #fff;
+}
+.purpleForm__formBlock-checkbox:hover::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: url("/assets/images/mark.svg");
+  opacity: 0.5;
+}
+.purpleForm__formBlock-checkbox:checked {
+  background: #fff;
+}
+.purpleForm__formBlock-checkbox:checked::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: url("/assets/images/mark.svg");
+}
+.purpleForm__formBlock-checkbox:checked:hover::before {
+  opacity: 1;
+}
+.purpleForm__formBlock-checkboxLink {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.purpleForm__formBlock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.purpleForm__formBlock-inputBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.purpleForm__formBlock-input {
+  width: 100%;
+  padding: 25px;
+  background: #59368C;
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: "GolosText";
+  border: none;
+  outline: none;
+}
+.purpleForm__formBlock-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: "GolosText";
+}
+.purpleForm__formBlock-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: "GolosText";
+}
+.purpleForm .primary-btn {
+  flex-shrink: 0;
+}
+.purpleForm__image {
+  position: absolute;
+  bottom: 0;
+  right: 155px;
+}
+
+@media (max-width: 1550px) {
+  .informationBlock__info {
+    padding: 50px 25px;
+  }
+}
+@media (max-width: 1300px) {
+  .purpleForm__image {
+    display: none;
+  }
+  .purpleForm__formBlock {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .textBlock h2 {
+    font-size: 36px;
+  }
+  .advantages__title {
+    font-size: 30px;
+  }
+  .advantages__item {
+    width: calc(50% - 5px);
+  }
+  .purpleForm__formBlock-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 850px) {
+  .textBlock h2 {
+    font-size: 26px;
+  }
+  .textBlock p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .informationBlock__info {
+    padding: 70px 10px 10px 10px;
+  }
+  .advantages {
+    margin: 60px 0;
+  }
+  .advantages__item {
+    width: 100%;
+    padding: 20px;
+  }
+  .advantages__item {
+    height: auto;
+    gap: 15px;
+  }
+  .advantages__item-name {
+    font-size: 16px;
+  }
+  .advantages__item-decor {
+    width: 32px;
+    height: 18px;
+  }
+  .advantages__item-decor::after {
+    width: 12px;
+    height: 12px;
+  }
+  .advantages__item-nameblock {
+    gap: 10px;
+  }
+  .advantages__item:nth-child(4),
+  .advantages__item:nth-child(5) {
+    width: 100%;
+  }
+  .advantages__item-text {
+    font-size: 14px;
+  }
+  .textBlock ol li {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .textBlock__citata-sircle {
+    width: 28px;
+    height: 28px;
+  }
+  .textBlock__citata-bottom {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  .textBlock__citata-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .textBlock__citata-name {
+    font-size: 14px;
+  }
+  .textBlock__citata-position {
+    font-size: 12px;
+  }
+  .textBlock__citata {
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .textBlock__citata-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .purpleForm__formBlock-input {
+    padding: 20px;
+    order: 0;
+  }
+  .purpleForm__formBlock-inputBlock {
+    display: contents;
+  }
+  .purpleForm__formBlock-checkboxBlock {
+    order: 1;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  .purpleForm .primary-btn {
+    order: 2;
+  }
+  .purpleForm__formBlock-checkbox {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .purpleForm__formBlock-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .purpleForm__formBlock-text {
+    font-size: 14px;
+  }
+  .purpleForm {
+    padding: 40px 20px;
+  }
+  .purpleForm__formBlock-checkboxLink {
+    font-size: 11px;
+  }
+}
+.advantages2__titleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.advantages2__mainblock {
+  position: relative;
+}
+.advantages2__text {
+  text-align: center;
+  max-width: 750px;
+}
+.advantages2__title {
+  max-width: 700px;
+  text-align: center;
+}
+.advantages2__image {
+  text-align: center;
+}
+.advantages2__item {
+  position: absolute;
+  cursor: pointer;
+}
+.advantages2__item:nth-child(1) {
+  right: 20%;
+  top: -5%;
+}
+.advantages2__item:nth-child(2) {
+  top: 14%;
+  left: 32%;
+}
+.advantages2__item:nth-child(3) {
+  top: 31%;
+  right: 20%;
+}
+.advantages2__item:nth-child(4) {
+  top: 50%;
+  left: 32%;
+}
+.advantages2__item:nth-child(5) {
+  top: 67%;
+  right: 20%;
+}
+.advantages2__item:nth-child(6) {
+  top: 84%;
+  left: 41%;
+}
+.advantages2__item-question {
+  padding: 10px;
+  background: #F7F3FC;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 341px;
+  margin-bottom: 5px;
+  border: 1px solid #EDE9F3;
+}
+.advantages2__item-number {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #472080;
+  border-radius: 5px;
+  background: #fff;
+}
+.advantages2__item-answerBlock {
+  background: #F7F3FC;
+  border-radius: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 440px;
+  transition: all 0.2s linear;
+  overflow: hidden;
+  height: 0;
+}
+.advantages2__item-answerBlock p {
+  padding: 10px;
+  color: #757575;
+  line-height: 140%;
+}
+
+@media (max-width: 1250px) {
+  .advantages2__item:nth-child(1) {
+    right: 7%;
+  }
+  .advantages2__item:nth-child(2) {
+    left: 20%;
+  }
+  .advantages2__item:nth-child(3) {
+    right: 10%;
+  }
+  .advantages2__item:nth-child(4) {
+    left: 22%;
+  }
+  .advantages2__item:nth-child(5) {
+    right: 12%;
+  }
+}
+@media (max-width: 850px) {
+  .advantages2__image {
+    display: none;
+  }
+  .advantages2__item {
+    position: static;
+    border: 1px solid #EDE9F3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .advantages2__item-question {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advantages2__item-answerBlock {
+    width: 100%;
+    max-width: 100%;
+  }
+  .advantages2__items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .advantages2__item-answerBlock {
+    border-radius: 0 0 5px 5px;
+  }
+  .advantages2__mainblock {
+    padding: 0 10px;
+  }
+  .advantages2__item-answerBlock p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

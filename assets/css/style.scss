@@ -174,6 +174,11 @@ body{
     color: $bordeaux;
   }
 }
+.site-subtitle{
+  font-size: 16px;
+  color: $secondaryText;
+  line-height: 140%;
+}
 @media(max-width:1200px){
   .h2-title{
     font-size: 36px;
@@ -182,6 +187,10 @@ body{
 @media(max-width:850px){
   .h2-title{
     font-size: 26px;
+  }
+  .site-subtitle{
+    font-size: 14px;
+    line-height: 130%;
   }
 }
 .secondary-btn{
@@ -1775,6 +1784,140 @@ body{
     line-height: 140%;
     margin-bottom: 15px;
   }
+  & ol{
+    counter-reset: section;
+    margin-bottom: 30px;
+  }
+  & ol li{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 25px;
+    padding-left: 42px;
+    position: relative;
+    & strong{
+      color: $indigo;
+      font-weight: 500;
+    }
+    &::before{
+      counter-increment: section;
+      content: counter(section);
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: $indigo;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      position: absolute;
+      left: 0;
+      top: 0;
+      flex-shrink: 0;
+    }
+  }
+  &__citata{
+    background: $white;
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    &-image{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #F5F5F5;
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-textSection{
+      padding: 50px 0;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    &-sircleBlock{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      &.top{
+        top: 0;
+        left: 0;
+        & .textBlock__citata-line{
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to right, #FFFFFF, #E51849 );
+        }
+      }
+      &.bottom{
+        right: 0;
+        bottom: 0;
+        flex-direction: row-reverse;
+        & .textBlock__citata-line{
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to left, #FFFFFF, #E51849 );
+        }
+      }
+    }
+    &-sircle{
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: $bordeaux;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &-doctorBlock{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    &-nameblock{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    &-name{
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+    &-position{
+      font-size: 14px;
+      color: $secondaryText;
+    }
+    &-link{
+      text-decoration: none;
+      color: $mainText;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $mainText;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      &::after{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 2px;
+        background: $bordeaux;
+      }
+    } 
+  }
 }
 
 .advantages{
@@ -1840,5 +1983,394 @@ body{
       color: $secondaryText;
       line-height: 140%;
     }
+  }
+}
+
+.purpleForm{
+  position: relative;
+  padding: 40px;
+  background: $indigo;
+  color: $white;
+  border-radius: $largeRadius;
+  overflow: hidden;
+  z-index: 1;
+  &__formBlock{
+    max-width: 650px;
+    &-title{
+      font-size: 44px;
+      line-height: 110%;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    &-text{
+      color: rgba($white,0.7);
+      line-height: 140%;
+      margin-bottom: 40px;
+    }
+    &-checkboxBlock{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-checkbox{
+      appearance: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: $smallRadius;
+      background: rgba($white,0.7);
+      cursor: pointer;
+      &:hover{
+        background: $white;
+        &::before{
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          background: url("/assets/images/mark.svg");
+          opacity: 0.5;
+        }
+      }
+      &:checked{
+        background: $white;
+        &::before{
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          background: url("/assets/images/mark.svg");
+        }
+        &:hover{
+          &::before{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &-checkboxLink{
+      font-size: 14px;
+      color: rgba($white, 0.7);
+    }
+    &-form{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    &-inputBlock{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-input{
+      width: 100%;
+      padding: 25px;
+      background: #59368C;
+      border-radius: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      font-family: "GolosText";
+      border: none;
+      outline: none;
+      &::placeholder{
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-family: "GolosText";
+      }
+    }
+  }
+  & .primary-btn{
+    flex-shrink: 0;
+  }
+  &__image{
+    position: absolute;
+    bottom: 0;
+    right: 155px;
+  }
+}
+
+@media(max-width:1550px){
+  .informationBlock__info{
+    padding: 50px 25px;
+  }
+}
+@media(max-width:1300px){
+  .purpleForm__image{
+    display: none;
+  }
+  .purpleForm__formBlock{
+    max-width: 100%;
+  }
+}
+@media(max-width:1200px){
+  .textBlock h2{
+    font-size: 36px;
+  }
+  .advantages__title{
+    font-size: 30px;
+  }
+  .advantages__item{
+    width: calc(100% / 2 - 10px * 1 / 2);
+  }
+  .purpleForm__formBlock-title{
+    font-size: 36px;
+  }
+}
+@media(max-width:850px){
+  .textBlock h2{
+    font-size: 26px;
+  }
+  .textBlock p{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .informationBlock__info{
+    padding: 70px 10px 10px 10px;
+  }
+  .advantages{
+    margin: 60px 0;
+  }
+  .advantages__item{
+    width: 100%;
+    padding: 20px;
+  }
+  .advantages__item{
+    height: auto;
+    gap: 15px;
+  }
+  .advantages__item-name{
+    font-size: 16px;
+  }
+  .advantages__item-decor{
+    width: 32px;
+    height: 18px;
+    &::after{
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .advantages__item-nameblock{
+    gap: 10px;
+  }
+  .advantages__item:nth-child(4),
+  .advantages__item:nth-child(5){
+    width: 100%;
+  }
+  .advantages__item-text{
+    font-size: 14px;
+  }
+  .textBlock ol li{
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .textBlock__citata-sircle{
+    width: 28px;
+    height: 28px;
+  }
+  .textBlock__citata-bottom{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  .textBlock__citata-image{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .textBlock__citata-name{
+    font-size: 14px;
+  }
+  .textBlock__citata-position{
+    font-size: 12px;
+  }
+  .textBlock__citata{
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .textBlock__citata-link{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .purpleForm__formBlock-input{
+    padding: 20px;
+    order: 0;
+  }
+  .purpleForm__formBlock-inputBlock{
+    display: contents;
+  }
+  .purpleForm__formBlock-checkboxBlock{
+    order: 1;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  .purpleForm .primary-btn{
+    order: 2;
+  }
+  .purpleForm__formBlock-checkbox{
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .purpleForm__formBlock-title{
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .purpleForm__formBlock-text{
+    font-size: 14px;
+  }
+  .purpleForm{
+    padding: 40px 20px;
+  }
+  .purpleForm__formBlock-checkboxLink{
+    font-size: 11px;
+  }
+}
+
+.advantages2{
+  &__titleBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  &__mainblock{
+    position: relative;
+  }
+  &__text{
+    text-align: center;
+    max-width: 750px;
+  }
+  &__title{
+    max-width: 700px;
+    text-align: center;
+  }
+  &__image{
+    text-align: center;
+  }
+  &__item{
+    position: absolute;
+    cursor: pointer;
+    &:nth-child(1){
+      right: 20%;
+      top: -5%;
+    }
+    &:nth-child(2){
+      top: 14%;
+      left: 32%;
+    }
+    &:nth-child(3){
+      top: 31%;
+      right: 20%;
+    }
+    &:nth-child(4){
+      top: 50%;
+      left: 32%;
+    }
+    &:nth-child(5){
+      top: 67%;
+      right: 20%;
+    }
+    &:nth-child(6){
+        top: 84%;
+        left: 41%;
+    }
+    &-question{
+      padding: 10px;
+      background: $indigoLight;
+      border-radius: $mediumRadius;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      max-width: 341px;
+      margin-bottom: 5px;
+      border: 1px solid #EDE9F3
+    }
+    &-number{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: $indigo;
+      border-radius: $smallRadius;
+      background: $white;
+    }
+    &-answerBlock{
+      background: $indigoLight;
+      border-radius: $mediumRadius;
+      width: max-content;
+      max-width: 440px;
+      transition: all 0.2s linear;
+      overflow: hidden;
+      height: 0;
+      & p{
+        padding: 10px; 
+        color: $secondaryText;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+@media(max-width:1250px){
+  .advantages2__item:nth-child(1){
+    right: 7%;
+  }
+  .advantages2__item:nth-child(2){
+    left: 20%;
+  }
+  .advantages2__item:nth-child(3){
+    right: 10%;
+  }
+  .advantages2__item:nth-child(4){
+    left: 22%;
+  }
+  .advantages2__item:nth-child(5){
+    right: 12%;
+  }
+  .advantages2__item:nth-child(6){}
+}
+
+@media(max-width:850px){
+  .advantages2__image{
+    display: none;
+  }
+  .advantages2__item{
+    position: static;
+    border: 1px solid #EDE9F3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .advantages2__item-question{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advantages2__item-answerBlock{
+    width: 100%;
+    max-width: 100%;
+  }
+  .advantages2__items{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .advantages2__item-answerBlock{
+    border-radius: 0 0 5px 5px;
+  }
+  .advantages2__mainblock{
+    padding: 0 10px;
+  }
+  .advantages2__item-answerBlock p{
+    font-size: 14px;
   }
 }

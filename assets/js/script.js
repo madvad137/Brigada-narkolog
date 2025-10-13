@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
   InitFAQItems(document.querySelectorAll('.footer__services-item'))
   
   InitFAQItems(document.querySelectorAll('.prices__item-titleBlock'))
+
+  InitFAQItems(document.querySelectorAll('.advantages2__item'))
   InitTabs('.prices')
 
   const howFastSelects = document.querySelectorAll('.howFast__formBlock-input')
