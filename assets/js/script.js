@@ -296,6 +296,82 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
+  const reviewsSlider = new Swiper(".reviews__slider", {
+    slidesPerView: 1.1,
+    spaceBetween: 10,
+    breakpoints: {
+      1201: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+    on: {
+      slideChangeTransitionStart: () => {
+        if (window.innerWidth > 1250) {
+          let activeFlag = false;
+          reviewsSlider.slides.forEach((item) => {
+            if (item.classList.contains("swiper-slide-active")) {
+              activeFlag = true;
+              console.log("главный слайд", item);
+            }
+            if (
+              activeFlag &&
+              !item.classList.contains("swiper-slide-active") &&
+              !item.classList.contains("swiper-slide-next")
+            ) {
+              item.style.marginLeft = `-${item.clientWidth / 2}px`;
+            } else {
+              item.style.marginLeft = "0px";
+            }
+          });
+        } else {
+          reviewsSlider.slides.forEach((item) => {
+            item.style.marginLeft = "0px";
+          });
+        }
+      },
+      init: () => {
+        setTimeout(() => {
+          if (window.innerWidth > 1250) {
+            let activeFlag = false;
+            reviewsSlider.slides.forEach((item) => {
+              if (item.classList.contains("swiper-slide-active")) {
+                activeFlag = true;
+                console.log("главный слайд", item);
+              }
+              if (
+                activeFlag &&
+                !item.classList.contains("swiper-slide-active") &&
+                !item.classList.contains("swiper-slide-next")
+              ) {
+                item.style.marginLeft = `-${item.clientWidth / 2}px`;
+              } else {
+                item.style.marginLeft = "0px";
+              }
+            });
+          }
+        }, 300);
+      },
+    },
+  });
+  if (window.innerWidth <= 1250) {
+    const reviews__information = document.querySelector(
+      ".reviews__information"
+    );
+    reviews__information.style.width = "100%";
+    const swiperSlide = document.createElement("div");
+    swiperSlide.classList.add("swiper-slide");
+    swiperSlide.appendChild(reviews__information);
+    const reviews__slider__wrapper = document.querySelector(
+      ".reviews__slider .swiper-wrapper"
+    );
+    reviews__slider__wrapper.insertBefore(
+      swiperSlide,
+      reviews__slider__wrapper.querySelector(".swiper-slide")
+    );
+    reviewsSlider.init();
+  }
+
   const actionSlider = new Swiper(".motivation__bottom-slider", {
     slidesPerView: 1.1,
     spaceBetween: 10,
@@ -315,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const gallerySlider2 = new Swiper(".gallery__slider2", {
     spaceBetween: 13,
-    slidesPerView: 6,
+    slidesPerView: 5,
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
@@ -323,6 +399,9 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".gallery__slider2-btn.prev",
     },
     breakpoints: {
+      621: {
+        slidesPerView: 6,
+      },
       1251: {
         slidesPerView: 7,
       },
