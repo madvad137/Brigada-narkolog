@@ -1,3 +1,5 @@
+Fancybox.bind("[data-fancybox]", {});
+
 function InitTabs(container) {
   //ищет внутри контейнера все элементы tab-item и tab-content. Если элементов поровну тогда активирует табы
   const tabContainer = document.querySelector(container);
@@ -99,11 +101,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const headerBurger = document.querySelector(".burger-btn");
+  const mobileNav = document.querySelector(".header__nav");
+  const mobileNavList = mobileNav.querySelector(".header__nav-list");
+
+  if (headerBurger && mobileNav && mobileNavList) {
+    headerBurger.addEventListener("click", () => {
+      headerBurger.classList.toggle("active");
+      mobileNav.classList.toggle("active");
+    });
+    mobileNav.addEventListener("click", () => {
+      headerBurger.classList.remove("active");
+      mobileNav.classList.remove("active");
+    });
+    mobileNavList.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+
   InitFAQItems(document.querySelectorAll(".footer__services-item"));
 
   InitFAQItems(document.querySelectorAll(".prices__item-titleBlock"));
 
   InitFAQItems(document.querySelectorAll(".advantages2__item"));
+
+  InitFAQItems(document.querySelectorAll(".textWithPanel__services-item"));
+  InitFAQItems(document.querySelectorAll(".faqBlock__faq"));
   InitTabs(".prices");
 
   const howFastSelects = document.querySelectorAll(".howFast__formBlock-input");
@@ -144,6 +167,44 @@ document.addEventListener("DOMContentLoaded", () => {
         sircle.setAttribute("style", `transform: translateX(${translateX}px);`);
       } else {
         sircle.setAttribute("style", `transform: translateX(0);`);
+      }
+    });
+  }
+
+  const textblockContents = document.querySelectorAll(
+    ".textWithPanel__content ul"
+  );
+  const textBlocksTitles = document.querySelectorAll(
+    ".textBlock h2, .textBlock h3"
+  );
+
+  if (textblockContents.length && textBlocksTitles.length) {
+    textBlocksTitles.forEach((title, index) => {
+      title.setAttribute("id", `title-${index}`);
+      textblockContents.forEach((list) => {
+        const contentItem = document.createElement("li");
+        contentItem.innerHTML = `<a href="#title-${index}">${title.innerHTML}</a>`;
+        list.appendChild(contentItem);
+      });
+    });
+  }
+
+    const anchors = document.querySelectorAll('a[href*="#"]');
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const blockID = anchor.getAttribute("href").substr(1);
+      const targetElement = document.getElementById(blockID);
+
+      if (targetElement) {
+        const targetPosition =
+          targetElement.getBoundingClientRect().top + window.pageYOffset ;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
       }
     });
   }
@@ -358,18 +419,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviews__information = document.querySelector(
       ".reviews__information"
     );
-    reviews__information.style.width = "100%";
-    const swiperSlide = document.createElement("div");
-    swiperSlide.classList.add("swiper-slide");
-    swiperSlide.appendChild(reviews__information);
-    const reviews__slider__wrapper = document.querySelector(
-      ".reviews__slider .swiper-wrapper"
-    );
-    reviews__slider__wrapper.insertBefore(
-      swiperSlide,
-      reviews__slider__wrapper.querySelector(".swiper-slide")
-    );
-    reviewsSlider.init();
+    if (reviews__information) {
+      reviews__information.style.width = "100%";
+      const swiperSlide = document.createElement("div");
+      swiperSlide.classList.add("swiper-slide");
+      swiperSlide.appendChild(reviews__information);
+      const reviews__slider__wrapper = document.querySelector(
+        ".reviews__slider .swiper-wrapper"
+      );
+      reviews__slider__wrapper.insertBefore(
+        swiperSlide,
+        reviews__slider__wrapper.querySelector(".swiper-slide")
+      );
+      reviewsSlider.init();
+    }
   }
 
   const actionSlider = new Swiper(".motivation__bottom-slider", {
@@ -389,6 +452,53 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  const licensesSlider = new Swiper(".reviews__licensesSlider", {
+    slidesPerView: 1.1,
+    spaceBetween: 10,
+    breakpoints: {
+      850: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1700: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  const servicesLicenseSlider = new Swiper(
+    ".textWithPanel__licenses-slider.first-slider",
+    {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      navigation: {
+        nextEl:
+          ".textWithPanel__licenses-slider.first-slider .textWithPanel__licenses-btn.next",
+        prevEl:
+          ".textWithPanel__licenses-slider.first-slider .textWithPanel__licenses-btn.prev",
+      },
+    }
+  );
+  const servicesActionsSlider = new Swiper(
+    ".textWithPanel__actions-slider.first-slider",
+    {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      navigation: {
+        nextEl:
+          ".textWithPanel__actions-slider.first-slider .textWithPanel__actions-btn.next",
+        prevEl:
+          ".textWithPanel__actions-slider.first-slider .textWithPanel__actions-btn.prev",
+      },
+    }
+  );
+
   const gallerySlider2 = new Swiper(".gallery__slider2", {
     spaceBetween: 13,
     slidesPerView: 5,
