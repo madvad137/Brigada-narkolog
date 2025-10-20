@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    const anchors = document.querySelectorAll('a[href*="#"]');
+  const anchors = document.querySelectorAll('a[href*="#"]');
   for (let anchor of anchors) {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (targetElement) {
         const targetPosition =
-          targetElement.getBoundingClientRect().top + window.pageYOffset ;
+          targetElement.getBoundingClientRect().top + window.pageYOffset;
 
         window.scrollTo({
           top: targetPosition,
@@ -207,6 +207,54 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+  }
+
+  const filters = document.querySelectorAll(".filters-container input");
+
+  const filtersItems = document.querySelectorAll(
+    ".filtersItems .doctors__item"
+  );
+
+  if (filters.length && filtersItems.length) {
+    filters.forEach((filter) => {
+      filter.addEventListener('click' , () =>{
+        const activeNames = []
+       filters.forEach((filter) =>{
+        if(filter.checked){
+          activeNames.push(filter.getAttribute('name'))
+        }
+       })
+
+       if(activeNames.includes("all")){
+        filtersItems.forEach((item) =>{
+          item.classList.add('visible')
+        })
+       } else{
+        filtersItems.forEach((item) =>{
+          item.classList.remove('visible')
+          if(activeNames.includes(item.getAttribute("data-cat"))){
+            item.classList.add('visible')
+          }
+        })
+       }
+
+       console.log(activeNames)
+      })
+    })
+   
+  }
+  const mobileFilterSelect = document.querySelector('.mobile-filtersSelect')
+  const filterContainer = document.querySelector('.filters-container')
+  if(mobileFilterSelect && filterContainer){
+    mobileFilterSelect.addEventListener('click', () =>{
+      mobileFilterSelect.classList.toggle('active')
+      filterContainer.classList.toggle('active')
+      if(filterContainer.classList.contains('active')){
+        filterContainer.style.height =`${filterContainer.scrollHeight+20}px`
+      } else{
+        filterContainer.style.height ="0"
+      }
+    })
   }
 });
 

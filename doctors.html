@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Врачи</title>
+    <link rel="stylesheet" href="/assets/css/swiper.css">
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="/assets/js/swiper-bundle.min.js"></script>
+    <script defer src="/assets/js/fancybox.min.js"></script>
+    <script defer src="/assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__top-inner">
+                    <div class="header__top-flexBlock">
+                        <div class="header__top-flexBlockName">Адрес call-центра:</div>
+                        <div class="header__top-flexBlockValue"><button>Улан-Удэ</button>, ул. Кожевникова, д.95</div>
+                    </div>
+                    <div class="header__top-flexBlock">
+                        <div class="header__top-flexBlockName">Медицинская лицензия:</div>
+                        <div class="header__top-flexBlockValue">ЛО-77-01-018683</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="header__bottom-inner">
+                    <a href="/" class="header__logo">
+                        <svg width="55" height="40" viewBox="0 0 55 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.1582 0C24.0328 6.91466e-05 24.7422 0.709368 24.7422 1.58398V6.80566C24.6965 6.8485 24.6507 6.8912 24.6055 6.93457L24.5928 6.94629L24.1016 7.4375C22.9999 8.57069 22.0214 9.81437 21.1641 11.1572C20.1389 12.763 19.3382 14.4804 18.7725 16.2979L18.7676 16.3125L18.7627 16.3281C18.2099 18.1354 17.9053 19.9956 17.9053 21.8867C17.9053 23.1407 18.0214 24.3863 18.2559 25.6172L18.2637 25.6602L18.2725 25.7031C18.5454 27.0351 18.9778 28.3187 19.5596 29.5439L19.5664 29.5586L19.5742 29.5732C20.1831 30.8386 20.9587 32.0254 21.9209 33.0908L21.9404 33.1133L21.96 33.1348C22.7889 34.0356 23.7292 34.7759 24.7422 35.3711V38.416C24.7422 39.2906 24.0328 39.9999 23.1582 40H16.8418C15.9672 39.9999 15.2578 39.2906 15.2578 38.416V24.7422H1.58398C0.709369 24.7422 7.14823e-05 24.0328 0 23.1582V16.8418C6.77699e-05 15.9672 0.709367 15.2578 1.58398 15.2578H15.2578V1.58398C15.2578 0.709368 15.9672 6.9948e-05 16.8418 0H23.1582Z" fill="#472080"/>
+                            <path d="M22 21.7153C22 20.5901 22.18 19.4367 22.5401 18.2552C22.9093 17.0643 23.4309 15.939 24.1049 14.8794C24.7788 13.8198 25.5497 12.8681 26.4175 12.0241C27.2945 11.1802 28.2869 10.5097 29.3948 10.0127C30.5026 9.51574 31.6289 9.26725 32.7736 9.26725C33.6599 9.26725 34.4677 9.43603 35.197 9.77361C35.9263 10.1018 36.5356 10.5425 37.0249 11.0958C37.5142 11.6397 37.9297 12.2773 38.2712 13.0087C38.6128 13.7401 38.8575 14.495 39.0052 15.2733C39.1621 16.0516 39.2406 16.8439 39.2406 17.6504C39.2406 18.7662 39.0606 19.9149 38.7005 21.0964C38.3405 22.278 37.8235 23.3938 37.1496 24.4441C36.4756 25.4943 35.7001 26.4367 34.8231 27.2713C33.9553 28.1058 32.9629 28.7716 31.8458 29.2686C30.738 29.7562 29.6117 30 28.4669 30C27.5899 30 26.7867 29.8406 26.0574 29.5218C25.3281 29.1936 24.7142 28.7575 24.2157 28.2137C23.7264 27.6698 23.3109 27.0415 22.9694 26.3289C22.6278 25.6068 22.3785 24.8614 22.2216 24.0924C22.0739 23.3141 22 22.5218 22 21.7153ZM35.2801 17.8473C35.2801 16.9565 35.1693 16.1407 34.9477 15.3999C34.7354 14.6591 34.38 14.0402 33.8815 13.5432C33.3829 13.0368 32.7782 12.7837 32.0674 12.7837C31.1627 12.7837 30.3133 13.0931 29.5194 13.712C28.7254 14.3309 28.0792 15.1092 27.5807 16.0469C27.0822 16.9752 26.6898 17.9551 26.4036 18.9866C26.1174 20.0181 25.9743 20.9745 25.9743 21.856C25.9743 22.4936 26.0343 23.0844 26.1544 23.6283C26.2744 24.1628 26.459 24.6504 26.7083 25.0911C26.9575 25.5318 27.2899 25.8788 27.7053 26.1319C28.13 26.3758 28.6193 26.4977 29.1732 26.4977C29.8933 26.4977 30.5811 26.3054 31.2365 25.921C31.892 25.5365 32.4597 25.0395 32.9398 24.43C33.4199 23.8111 33.8399 23.1219 34.2 22.3624C34.56 21.5934 34.8277 20.8198 35.0031 20.0415C35.1878 19.2632 35.2801 18.5318 35.2801 17.8473Z" fill="#E51849"/>
+                            <path d="M39.4073 25.9772L41.9553 23.4454C41.9738 23.7736 42.043 24.1018 42.163 24.43C42.2923 24.7488 42.4815 25.0676 42.7308 25.3865C42.9801 25.6959 43.3355 25.9491 43.7971 26.146C44.2679 26.3429 44.808 26.4414 45.4173 26.4414C46.5159 26.4414 47.4668 26.1507 48.2699 25.5693C49.0731 24.9879 49.4747 24.2472 49.4747 23.347C49.4747 21.6403 47.8499 20.787 44.6003 20.787H43.714L44.3648 17.566H45.2788C46.9128 17.566 48.2469 17.2987 49.2808 16.7642C50.3148 16.2204 50.8318 15.4514 50.8318 14.4575C50.8318 13.7823 50.6148 13.2713 50.1809 12.9243C49.7563 12.5774 49.2208 12.4039 48.5746 12.4039C47.6514 12.4039 46.779 12.6477 45.9573 13.1353C45.1357 13.6135 44.531 14.148 44.1433 14.7388L42.2738 11.9397C43.0678 11.0301 44.1202 10.3128 45.4311 9.78768C46.7513 9.26256 48.053 9 49.3362 9C51.0349 9 52.4012 9.4501 53.4352 10.3503C54.4784 11.2505 55 12.4086 55 13.8245C55 15.081 54.5799 16.1735 53.7398 17.1018C52.909 18.0301 51.7919 18.6537 50.3887 18.9725C51.3395 19.1601 52.0827 19.643 52.6182 20.4213C53.1536 21.1902 53.4213 22.1279 53.4213 23.2344C53.4213 24.0971 53.2506 24.8989 52.909 25.6397C52.5674 26.3804 52.1104 27.0134 51.538 27.5385C50.9749 28.0636 50.324 28.5137 49.5855 28.8888C48.8469 29.2545 48.0715 29.5265 47.259 29.7046C46.4559 29.8828 45.6527 29.9719 44.8495 29.9719C43.2893 29.9719 42.0384 29.6296 41.0967 28.9451C40.1551 28.2512 39.5919 27.2619 39.4073 25.9772Z" fill="#E51849"/>
+                        </svg>
+                        <p>Скорая<br>Наркология 03</p>
+                    </a>
+                    <div class="header__mobileButtons">
+                        <div class="header__mobileButtons-button pirple">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9802 12.4302C14.9802 12.6821 14.9242 12.941 14.8052 13.193C14.6862 13.4449 14.5322 13.6829 14.3293 13.9068C13.9863 14.2847 13.6083 14.5576 13.1813 14.7326C12.7613 14.9076 12.3064 14.9985 11.8164 14.9985C11.1024 14.9985 10.3395 14.8306 9.53451 14.4877C8.72955 14.1447 7.92459 13.6829 7.12663 13.102C6.32168 12.5141 5.55872 11.8633 4.83075 11.1425C4.10979 10.4147 3.45883 9.65184 2.87786 8.85404C2.30389 8.05623 1.84191 7.25843 1.50593 6.46762C1.16994 5.66982 1.00195 4.907 1.00195 4.17918C1.00195 3.70329 1.08595 3.24841 1.25394 2.82851C1.42193 2.40161 1.68792 2.00971 2.0589 1.65979C2.50687 1.2189 2.99685 1.00195 3.51482 1.00195C3.71081 1.00195 3.9068 1.04394 4.08179 1.12792C4.26378 1.2119 4.42478 1.33787 4.55077 1.51983L6.17468 3.80827C6.30068 3.98323 6.39167 4.14419 6.45467 4.29815C6.51767 4.44511 6.55266 4.59208 6.55266 4.72505C6.55266 4.893 6.50367 5.06096 6.40567 5.22192C6.31468 5.38288 6.18168 5.55084 6.01369 5.7188L5.48172 6.27167C5.40472 6.34865 5.36973 6.43963 5.36973 6.5516C5.36973 6.60759 5.37673 6.65657 5.39073 6.71256C5.41172 6.76855 5.43272 6.81054 5.44672 6.85253C5.57272 7.08347 5.7897 7.3844 6.09769 7.74831C6.41267 8.11222 6.74865 8.48313 7.11263 8.85404C7.49062 9.22495 7.8546 9.56786 8.22558 9.88279C8.58956 10.1907 8.89054 10.4007 9.12853 10.5266C9.16353 10.5406 9.20553 10.5616 9.25452 10.5826C9.31052 10.6036 9.36652 10.6106 9.42951 10.6106C9.54851 10.6106 9.6395 10.5686 9.7165 10.4916L10.2485 9.96677C10.4235 9.79181 10.5915 9.65884 10.7524 9.57486C10.9134 9.47689 11.0744 9.4279 11.2494 9.4279C11.3824 9.4279 11.5224 9.45589 11.6764 9.51888C11.8304 9.58186 11.9914 9.67284 12.1664 9.79181L14.4833 11.4364C14.6652 11.5624 14.7912 11.7093 14.8682 11.8843C14.9382 12.0593 14.9802 12.2342 14.9802 12.4302Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10"/>
+                                <path d="M12.5495 5.90058C12.5495 5.48068 12.2205 4.83683 11.7305 4.31196C11.2825 3.82908 10.6876 3.45117 10.0996 3.45117" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.9994 5.90076C14.9994 3.19242 12.8085 1.00195 10.0996 1.00195" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="header__mobileButtons-button burger-btn">
+                            <div class="header__nav-burger">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item servicesItem">
+                                <p href="#" class="header__nav-link">Услуги</p>
+                                <div class="header__nav-burger">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="header__servicesMenu">
+                                    <div class="header__servicesMenu-category">
+                                        <div class="header__servicesMenu-categoryTitleBlock">
+                                            <div class="header__servicesMenu-backArr">
+                                                <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <div class="header__servicesMenu-categoryTitle">Наши услуги</div>
+                                        </div>
+                                        <ul class="header__servicesMenu-categoryList">
+                                            <li class="header__servicesMenu-categoryItem tab-item">Лечение алкоголизма</li>
+                                            <li class="header__servicesMenu-categoryItem tab-item">Вывод из запоя</li>
+                                            <li class="header__servicesMenu-categoryItem tab-item">Кодирование от алкоголизма</li>
+                                            <li class="header__servicesMenu-categoryItem tab-item">Капельница на дому</li>
+                                            <li class="header__servicesMenu-categoryItem tab-item">Психиатрия и помощь психолога</li>
+                                            <li class="header__servicesMenu-categoryItem tab-item">Лечение наркомании</li>
+                                        </ul>
+                                    </div>
+                                    <div class="header__servicesMenu-rightBlock">
+                                        <div class="header__servicesMenu-searchBlock">
+                                            <input type="text" class="header__servicesMenu-search" placeholder="Поиск по услугам">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.59969 16.7C12.7969 16.7 16.1994 13.2974 16.1994 9.10002C16.1994 4.90264 12.7969 1.5 8.59969 1.5C4.4025 1.5 1 4.90264 1 9.10002C1 13.2974 4.4025 16.7 8.59969 16.7Z" stroke="#472080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.0003 17.5004L15.4004 15.9004" stroke="#E51849" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Лечение алкоголизма</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content active">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Вывод из запоя</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Кодирование от алкоголизма</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Капельница на дому</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Психиатрия и помощь психолога</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__servicesMenu-tabBlock tab-content">
+                                            <div class="header__servicesMenu-categoryNameBlock">
+                                                <div class="header__servicesMenu-categoryNameBackArr">
+                                                    <svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 6.5L0.5 3.49951L3.5 0.5" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                                <p class="header__servicesMenu-categoryName">Лечение наркомании</p>
+                                            </div>
+                                            <ul class="header__servicesMenu-subCategoryList">
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                                <li class="header__servicesMenu-subCategoryItem">
+                                                    <a href="#" class="header__servicesMenu-subCategoryLink">Лечение алкоголизма на дому</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__nav-item subitem">
+                                <a href="#" class="header__nav-link">О клинике</a>
+                                <div class="header__submenu">
+                                    <ul class="header__submenu-list">
+                                        <li class="header__submenu-item">
+                                            <a href="#" class="header__submenu-link">Лицензии</a>
+                                        </li>
+                                        <li class="header__submenu-item">
+                                            <a href="#" class="header__submenu-link">Врачи</a>
+                                        </li>
+                                        <li class="header__submenu-item">
+                                            <a href="#" class="header__submenu-link">О нас</a>
+                                        </li>
+                                        <li class="header__submenu-item">
+                                            <a href="#" class="header__submenu-link">Услуга еще подлиннее</a>
+                                        </li>
+                                        <li class="header__submenu-item">
+                                            <a href="#" class="header__submenu-link">Лицензии</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Врачи</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Лицензии</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Блог</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Отзывы</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">FAQ</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__infoBlock">
+                        <div class="header__infoBlock-left">
+                            <div class="header__infoBlock-socials">
+                                <a href="#">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.18407 11.2696C2.8934 11.1409 1.72919 10.8352 0.732735 10.0864C0.608811 9.9931 0.480671 9.90302 0.368549 9.79926C-0.0681376 9.39709 -0.111975 8.9354 0.233665 8.46084C0.528723 8.05385 1.02442 7.94526 1.53951 8.17932C1.63899 8.22356 1.7334 8.28067 1.82529 8.34099C3.68248 9.5668 6.23431 9.60059 8.09823 8.39649C8.2837 8.25976 8.48097 8.14876 8.70943 8.09245C9.15454 7.98306 9.56931 8.13991 9.80789 8.51393C10.081 8.94023 10.0777 9.35848 9.74129 9.68906C9.2262 10.1982 8.60573 10.5658 7.91698 10.8224C7.26533 11.0653 6.55129 11.1875 5.84567 11.268C5.9519 11.3798 6.00248 11.4345 6.06908 11.4988C7.02759 12.4238 7.99117 13.3464 8.94716 14.2746C9.27256 14.5915 9.34085 14.9832 9.16129 15.3516C8.96486 15.7538 8.52649 16.0184 8.09571 15.9902C7.82341 15.9717 7.61097 15.8414 7.42129 15.6589C6.69797 14.9591 5.96117 14.2722 5.25219 13.5595C5.04564 13.352 4.94617 13.3914 4.76407 13.5716C4.03655 14.2915 3.29721 15.0001 2.55198 15.7055C2.21814 16.0216 1.82024 16.0787 1.43244 15.8986C1.02105 15.7055 0.758026 15.3025 0.779101 14.8963C0.79259 14.6213 0.933375 14.4121 1.1298 14.2239C2.07848 13.3123 3.02576 12.4008 3.97163 11.4892C4.03402 11.428 4.09303 11.3637 4.18407 11.2696Z" fill="#472080"/>
+                                        <path d="M4.97062 8.09889C2.66747 8.09085 0.779101 6.25696 0.791747 4.0402C0.805235 1.79932 2.69529 -0.00561723 5.0212 1.31369e-05C7.35132 0.0056435 9.22198 1.83792 9.21103 4.10214C9.19838 6.31406 7.29736 8.10613 4.97062 8.09889ZM7.06384 4.04503C7.0654 3.786 7.01328 3.52923 6.91049 3.28947C6.8077 3.04972 6.65625 2.83172 6.46487 2.648C6.27348 2.46427 6.04592 2.31845 5.79527 2.2189C5.54463 2.11936 5.27583 2.06807 5.00434 2.06797C4.73029 2.06771 4.45893 2.11956 4.20612 2.22048C3.95331 2.32141 3.72411 2.46938 3.5319 2.65576C3.3397 2.84214 3.18834 3.06319 3.08667 3.30601C2.98501 3.54882 2.93507 3.80853 2.93977 4.06996C2.9401 4.3291 2.99414 4.58561 3.09879 4.82474C3.20344 5.06386 3.35663 5.28088 3.54954 5.46329C3.74244 5.6457 3.97127 5.78991 4.22282 5.88761C4.47438 5.9853 4.74371 6.03456 5.0153 6.03255C5.28685 6.0315 5.55551 5.97917 5.80576 5.87856C6.05601 5.77795 6.2829 5.63106 6.47335 5.44636C6.6638 5.26166 6.81403 5.04281 6.91538 4.80243C7.01673 4.56205 7.06718 4.30491 7.06384 4.04583V4.04503Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4502 0.088937C13.6346 0.010188 13.8365 -0.0169719 14.0347 0.0102836C14.233 0.0375392 14.4205 0.118214 14.5776 0.243911C14.7347 0.369609 14.8558 0.535733 14.9281 0.724994C15.0005 0.914254 15.0215 1.11973 14.9891 1.32004L13.2964 11.736C13.1322 12.7407 12.0456 13.3169 11.1373 12.8164C10.3776 12.3977 9.24916 11.7526 8.23417 11.0795C7.72668 10.7426 6.17211 9.66368 6.36316 8.89594C6.52735 8.2395 9.13945 5.77275 10.6321 4.30618C11.2179 3.73 10.9508 3.39762 10.2589 3.92762C8.54091 5.24352 5.78253 7.24463 4.87054 7.80794C4.06601 8.30462 3.64658 8.38942 3.14506 8.30462C2.23008 8.15016 1.38152 7.91091 0.688939 7.61941C-0.246939 7.2257 -0.201414 5.9204 0.688193 5.54031L13.4502 0.088937Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.43349 8.46546H2.51424V6.09391H8.43349C8.77925 6.09391 9.01966 6.15493 9.14031 6.26149C9.26096 6.36804 9.33571 6.56567 9.33571 6.85437V7.70591C9.33571 8.0101 9.26096 8.20773 9.14031 8.31429C9.01966 8.42084 8.77925 8.46637 8.43349 8.46637V8.46546ZM8.83958 3.85806H0.00390625V14H2.51424V10.7004H7.14051L9.33571 14H12.1468L9.72648 10.6849C10.6188 10.551 11.0195 10.2742 11.3499 9.8179C11.6803 9.36163 11.846 8.63213 11.846 7.65856V6.89809C11.846 6.32069 11.7857 5.8644 11.6803 5.51469C11.575 5.16496 11.3949 4.86077 11.1392 4.58756C10.8691 4.3289 10.5683 4.14676 10.2073 4.02471C9.84624 3.91816 9.39512 3.85714 8.83958 3.85714V3.85806Z" fill="#472080"/>
+                                        <path d="M14.0753 3.85714C15.1405 3.85714 16.0039 2.99369 16.0039 1.92857C16.0039 0.863451 15.1405 0 14.0753 0C13.0102 0 12.1468 0.863451 12.1468 1.92857C12.1468 2.99369 13.0102 3.85714 14.0753 3.85714Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.614 0.677143C16.7316 0.287143 16.614 0 16.0509 0H14.1915C13.7184 0 13.5002 0.247857 13.3819 0.521429C13.3819 0.521429 12.4363 2.80429 11.0969 4.28714C10.6634 4.71714 10.4665 4.85357 10.2299 4.85357C10.1116 4.85357 9.93382 4.71714 9.93382 4.32643V0.677143C9.93382 0.208571 9.80349 0 9.40967 0H6.48573C6.19036 0 6.01257 0.217143 6.01257 0.423571C6.01257 0.867143 6.68264 0.97 6.75135 2.21857V4.93143C6.75135 5.52643 6.64297 5.63429 6.4064 5.63429C5.77599 5.63429 4.24248 3.34071 3.33229 0.716428C3.15592 0.205714 2.97743 0 2.50215 0H0.641393C0.110154 0 0.00390625 0.247857 0.00390625 0.521429C0.00390625 1.00857 0.63431 3.42857 2.93989 6.62929C4.47694 8.815 6.64085 10 8.6121 10C9.79428 10 9.9402 9.73714 9.9402 9.28357V7.63143C9.9402 7.105 10.0521 7 10.4268 7C10.7031 7 11.1755 7.13714 12.2791 8.19071C13.5399 9.44 13.7474 10 14.4571 10H16.3165C16.8477 10 17.114 9.73714 16.9611 9.21714C16.7925 8.7 16.1904 7.94929 15.3921 7.05857C14.9586 6.55143 14.3084 6.005 14.1108 5.73143C13.8352 5.38071 13.9139 5.22429 14.1108 4.91214C14.1108 4.91214 16.3774 1.75071 16.6133 0.677143" fill="#472080"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header__infoBlock-numberBlock">
+                                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9762 19.1957C18.9762 19.5196 18.9042 19.8526 18.7512 20.1765C18.5983 20.5004 18.4003 20.8064 18.1393 21.0943C17.6983 21.5802 17.2123 21.9312 16.6633 22.1561C16.1233 22.3811 15.5384 22.4981 14.9084 22.4981C13.9904 22.4981 13.0095 22.2821 11.9745 21.8412C10.9395 21.4003 9.90458 20.8064 8.87861 20.0595C7.84365 19.3037 6.86269 18.4668 5.92672 17.54C4.99976 16.6042 4.16279 15.6234 3.41582 14.5976C2.67784 13.5717 2.08387 12.5459 1.65188 11.5291C1.2199 10.5033 1.00391 9.52251 1.00391 8.58669C1.00391 7.97481 1.1119 7.38992 1.32789 6.85002C1.54389 6.30112 1.88587 5.79722 2.36286 5.3473C2.93883 4.78041 3.56881 4.50146 4.23479 4.50146C4.48678 4.50146 4.73877 4.55545 4.96376 4.66343C5.19775 4.77141 5.40474 4.93338 5.56674 5.16734L7.65466 8.10978C7.81665 8.33474 7.93365 8.5417 8.01465 8.73966C8.09564 8.92863 8.14064 9.11759 8.14064 9.28856C8.14064 9.50452 8.07764 9.72048 7.95165 9.92744C7.83465 10.1344 7.66366 10.3504 7.44767 10.5663L6.76369 11.2772C6.6647 11.3762 6.6197 11.4931 6.6197 11.6371C6.6197 11.7091 6.6287 11.7721 6.6467 11.8441C6.6737 11.9161 6.7007 11.97 6.71869 12.024C6.88069 12.321 7.15968 12.7079 7.55566 13.1758C7.96065 13.6437 8.39263 14.1206 8.86061 14.5976C9.3466 15.0745 9.81458 15.5154 10.2916 15.9203C10.7595 16.3162 11.1465 16.5862 11.4525 16.7481C11.4975 16.7661 11.5515 16.7931 11.6145 16.8201C11.6865 16.8471 11.7585 16.8561 11.8395 16.8561C11.9925 16.8561 12.1095 16.8021 12.2085 16.7032L12.8925 16.0283C13.1175 15.8033 13.3334 15.6324 13.5404 15.5244C13.7474 15.3984 13.9544 15.3354 14.1794 15.3354C14.3504 15.3354 14.5304 15.3714 14.7284 15.4524C14.9264 15.5334 15.1334 15.6504 15.3584 15.8033L18.3373 17.9179C18.5713 18.0799 18.7332 18.2689 18.8322 18.4938C18.9222 18.7188 18.9762 18.9437 18.9762 19.1957Z" stroke="#472080" stroke-width="1.2" stroke-miterlimit="10"/>
+                                    <path d="M15.8511 10.8003C15.8511 10.2604 15.4281 9.43254 14.7981 8.75767C14.2221 8.13679 13.4571 7.65088 12.7012 7.65088" stroke="#E51849" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19.0009 10.8003C19.0009 7.31793 16.184 4.50146 12.7012 4.50146" stroke="#E51849" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <a href="#">8 (899) 000-00-00</a>
+                            </div>
+                        </div>
+                        <button class="primary-btn">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <main class="main">
+            <div class="sectionTitleBlock">
+                <div class="container">
+                    <div class="sectionTitleBlock__inner">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <span>Врачи</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="h1-title">Врачи <span>клиники</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="doctorpage section-mb">
+                <div class="container">
+                    <div class="doctorpage__inner">
+                        <div class="doctorpage__filters">
+                            <div class="doctorpage__filters-select mobile-filtersSelect">
+                                Специальность
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.00065 5L9 1" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="doctorpage__filters-container filters-container">
+                                <div class="doctorpage__filters-item">
+                                    <input name="all" type="checkbox" class="purpleForm__formBlock-checkbox white all">
+                                    <p>все</p>
+                                </div>
+                                <div class="doctorpage__filters-item">
+                                    <input name="psihiatr" type="checkbox" class="purpleForm__formBlock-checkbox white">
+                                    <p>Психиатр-нарколог</p>
+                                </div>
+                                <div class="doctorpage__filters-item">
+                                    <input name="feldser" type="checkbox" class="purpleForm__formBlock-checkbox white">
+                                    <p>Фельдшер скорой помощи</p>
+                                </div>
+                                <div class="doctorpage__filters-item">
+                                    <input name="psihoter" type="checkbox" class="purpleForm__formBlock-checkbox white">
+                                    <p>Психотерапевт</p>
+                                </div>
+                                <div class="doctorpage__filters-item">
+                                    <input name="psihiatr" type="checkbox" class="purpleForm__formBlock-checkbox white">
+                                    <p>Психиатр</p>
+                                </div>
+                                <div class="doctorpage__filters-item">
+                                    <input name="narcolog" type="checkbox" class="purpleForm__formBlock-checkbox white">
+                                    <p>Нарколог</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctorpage__doctorsContainer">
+                            <div class="doctorpage__items filtersItems">
+                                <div class="doctors__item" data-cat="psihiatr">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="psihiatr">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="feldser">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="feldser">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="feldser">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="feldser">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="narcolog">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="narcolog">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="narcolog">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="narcolog">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+                                <div class="doctors__item" data-cat="narcolog">
+                                    <div class="doctors__imageBlock">
+                                        <div class="doctors__stage">25 лет стажа</div>
+                                        <div class="doctors__image">
+                                            <picture>
+                                                <source srcset="/assets/images/doctor.png" type="image/webp"/>
+                                                <img src="/assets/images/doctor.png" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <div class="doctors__absolute1">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 16V6C16 3.23858 13.7614 1 11 1H1" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="doctors__absolute2">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V11C1 13.7614 3.23858 16 6 16H16" stroke="#E51849" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="doctors__nameblock">
+                                        <div class="doctors__name">Паньков Валентин Григорьевич</div>
+                                        <div class="doctors__position">Главный врач, невролог, психотерапевт</div>
+                                    </div>
+                                    <a href="#" class="doctors__link textBlock__citata-link">О враче</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="purpleForm section-mb">
+                    <div class="howFast__absoluteGrid">
+                        <svg width="1320" height="475" viewBox="0 0 1320 475" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1532 -633.129L-210.127 -633.129M1532 -563.444L-210.127 -563.444M1532 -493.759L-210.127 -493.759M1532 -424.073L-210.127 -424.074M1532 -354.388L-210.127 -354.388M1532 -284.703L-210.127 -284.703M1532 -215.018L-210.127 -215.018M1532 -145.333L-210.127 -145.333M1532 -75.6478L-210.127 -75.6478M1532 -5.96263L-210.127 -5.96269M1532 63.7225L-210.127 63.7224M1532 133.408L-210.127 133.408M1532 203.093L-210.127 203.093M1532 272.778L-210.127 272.778M1532 342.463L-210.127 342.463M1532 412.148L-210.127 412.148M1532 481.833L-210.127 481.833M1532 551.519L-210.127 551.518M1532 621.204L-210.127 621.204M1532 690.889L-210.127 690.889M1532 760.574L-210.127 760.574M1532 830.259L-210.127 830.259M1532 899.944L-210.127 899.944M1532 969.63L-210.127 969.63M1532 1039.31L-210.127 1039.31M1532 1109L-210.127 1109M1531.13 1108.13L1531.13 -634M1461.44 1108.13L1461.44 -634M1391.76 1108.13L1391.76 -634M1322.07 1108.13L1322.07 -634M1252.39 1108.13L1252.39 -634M1182.7 1108.13L1182.7 -634M1113.02 1108.13L1113.02 -634M1043.33 1108.13L1043.33 -634M973.648 1108.13L973.648 -634M903.963 1108.13L903.963 -634M834.278 1108.13L834.278 -634M764.592 1108.13L764.592 -634M694.907 1108.13L694.907 -634M625.222 1108.13L625.222 -634M555.537 1108.13L555.537 -634M485.852 1108.13L485.852 -634M416.167 1108.13L416.167 -634M346.481 1108.13L346.482 -634M276.796 1108.13L276.796 -634M207.111 1108.13L207.111 -634M137.426 1108.13L137.426 -634M67.7407 1108.13L67.7408 -634M-1.94448 1108.13L-1.94437 -634M-71.6297 1108.13L-71.6295 -634M-141.315 1108.13L-141.315 -634M-211 1108.13L-211 -634" stroke="white" stroke-opacity="0.05"/>
+                        </svg>
+                    </div>
+                    <div class="purpleForm__formBlock">
+                        <div class="purpleForm__formBlock-title">Вызовите врача-нарколога на дом — быстро, анонимно, без лишних слов</div>
+                        <p class="purpleForm__formBlock-text">Оставьте свой номер — мы перезвоним вам в течение 5 минут, уточним детали и отправим ближайшую свободную бригаду</p>
+                        <form class="purpleForm__formBlock-form">
+                            <div class="purpleForm__formBlock-checkboxBlock">
+                                <input type="checkbox" class="purpleForm__formBlock-checkbox">
+                                <p class="purpleForm__formBlock-checkboxLink">Отправляя заявку, вы соглашаетесь с <a>политикой конфиденциальности</a></p>
+                            </div>
+                            <div class="purpleForm__formBlock-inputBlock">
+                                <input type="tel" class="purpleForm__formBlock-input" placeholder="Номер телефона">
+                                <button type="submit" class="primary-btn">Оставить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="purpleForm__image">
+                        <img src="/assets/images/iphone.png" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logoSection">
+                    <div class="footer__logoAndRaiting">
+                        <a href="/" class="header__logo">
+                            <svg width="55" height="40" viewBox="0 0 55 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.1582 0C24.0328 6.91466e-05 24.7422 0.709368 24.7422 1.58398V6.80566C24.6965 6.8485 24.6507 6.8912 24.6055 6.93457L24.5928 6.94629L24.1016 7.4375C22.9999 8.57069 22.0214 9.81437 21.1641 11.1572C20.1389 12.763 19.3382 14.4804 18.7725 16.2979L18.7676 16.3125L18.7627 16.3281C18.2099 18.1354 17.9053 19.9956 17.9053 21.8867C17.9053 23.1407 18.0214 24.3863 18.2559 25.6172L18.2637 25.6602L18.2725 25.7031C18.5454 27.0351 18.9778 28.3187 19.5596 29.5439L19.5664 29.5586L19.5742 29.5732C20.1831 30.8386 20.9587 32.0254 21.9209 33.0908L21.9404 33.1133L21.96 33.1348C22.7889 34.0356 23.7292 34.7759 24.7422 35.3711V38.416C24.7422 39.2906 24.0328 39.9999 23.1582 40H16.8418C15.9672 39.9999 15.2578 39.2906 15.2578 38.416V24.7422H1.58398C0.709369 24.7422 7.14823e-05 24.0328 0 23.1582V16.8418C6.77699e-05 15.9672 0.709367 15.2578 1.58398 15.2578H15.2578V1.58398C15.2578 0.709368 15.9672 6.9948e-05 16.8418 0H23.1582Z" fill="#472080"/>
+                                <path d="M22 21.7153C22 20.5901 22.18 19.4367 22.5401 18.2552C22.9093 17.0643 23.4309 15.939 24.1049 14.8794C24.7788 13.8198 25.5497 12.8681 26.4175 12.0241C27.2945 11.1802 28.2869 10.5097 29.3948 10.0127C30.5026 9.51574 31.6289 9.26725 32.7736 9.26725C33.6599 9.26725 34.4677 9.43603 35.197 9.77361C35.9263 10.1018 36.5356 10.5425 37.0249 11.0958C37.5142 11.6397 37.9297 12.2773 38.2712 13.0087C38.6128 13.7401 38.8575 14.495 39.0052 15.2733C39.1621 16.0516 39.2406 16.8439 39.2406 17.6504C39.2406 18.7662 39.0606 19.9149 38.7005 21.0964C38.3405 22.278 37.8235 23.3938 37.1496 24.4441C36.4756 25.4943 35.7001 26.4367 34.8231 27.2713C33.9553 28.1058 32.9629 28.7716 31.8458 29.2686C30.738 29.7562 29.6117 30 28.4669 30C27.5899 30 26.7867 29.8406 26.0574 29.5218C25.3281 29.1936 24.7142 28.7575 24.2157 28.2137C23.7264 27.6698 23.3109 27.0415 22.9694 26.3289C22.6278 25.6068 22.3785 24.8614 22.2216 24.0924C22.0739 23.3141 22 22.5218 22 21.7153ZM35.2801 17.8473C35.2801 16.9565 35.1693 16.1407 34.9477 15.3999C34.7354 14.6591 34.38 14.0402 33.8815 13.5432C33.3829 13.0368 32.7782 12.7837 32.0674 12.7837C31.1627 12.7837 30.3133 13.0931 29.5194 13.712C28.7254 14.3309 28.0792 15.1092 27.5807 16.0469C27.0822 16.9752 26.6898 17.9551 26.4036 18.9866C26.1174 20.0181 25.9743 20.9745 25.9743 21.856C25.9743 22.4936 26.0343 23.0844 26.1544 23.6283C26.2744 24.1628 26.459 24.6504 26.7083 25.0911C26.9575 25.5318 27.2899 25.8788 27.7053 26.1319C28.13 26.3758 28.6193 26.4977 29.1732 26.4977C29.8933 26.4977 30.5811 26.3054 31.2365 25.921C31.892 25.5365 32.4597 25.0395 32.9398 24.43C33.4199 23.8111 33.8399 23.1219 34.2 22.3624C34.56 21.5934 34.8277 20.8198 35.0031 20.0415C35.1878 19.2632 35.2801 18.5318 35.2801 17.8473Z" fill="#E51849"/>
+                                <path d="M39.4073 25.9772L41.9553 23.4454C41.9738 23.7736 42.043 24.1018 42.163 24.43C42.2923 24.7488 42.4815 25.0676 42.7308 25.3865C42.9801 25.6959 43.3355 25.9491 43.7971 26.146C44.2679 26.3429 44.808 26.4414 45.4173 26.4414C46.5159 26.4414 47.4668 26.1507 48.2699 25.5693C49.0731 24.9879 49.4747 24.2472 49.4747 23.347C49.4747 21.6403 47.8499 20.787 44.6003 20.787H43.714L44.3648 17.566H45.2788C46.9128 17.566 48.2469 17.2987 49.2808 16.7642C50.3148 16.2204 50.8318 15.4514 50.8318 14.4575C50.8318 13.7823 50.6148 13.2713 50.1809 12.9243C49.7563 12.5774 49.2208 12.4039 48.5746 12.4039C47.6514 12.4039 46.779 12.6477 45.9573 13.1353C45.1357 13.6135 44.531 14.148 44.1433 14.7388L42.2738 11.9397C43.0678 11.0301 44.1202 10.3128 45.4311 9.78768C46.7513 9.26256 48.053 9 49.3362 9C51.0349 9 52.4012 9.4501 53.4352 10.3503C54.4784 11.2505 55 12.4086 55 13.8245C55 15.081 54.5799 16.1735 53.7398 17.1018C52.909 18.0301 51.7919 18.6537 50.3887 18.9725C51.3395 19.1601 52.0827 19.643 52.6182 20.4213C53.1536 21.1902 53.4213 22.1279 53.4213 23.2344C53.4213 24.0971 53.2506 24.8989 52.909 25.6397C52.5674 26.3804 52.1104 27.0134 51.538 27.5385C50.9749 28.0636 50.324 28.5137 49.5855 28.8888C48.8469 29.2545 48.0715 29.5265 47.259 29.7046C46.4559 29.8828 45.6527 29.9719 44.8495 29.9719C43.2893 29.9719 42.0384 29.6296 41.0967 28.9451C40.1551 28.2512 39.5919 27.2619 39.4073 25.9772Z" fill="#E51849"/>
+                            </svg>
+                            <p>Скорая<br>Наркология 03</p>
+                        </a>
+                        <div class="footer__raitingBlock">
+                            <div class="footer__raiting">
+                                <span>5.0</span>
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.97322 1.27816C6.2964 0.240614 7.7036 0.240613 8.02678 1.27816L8.93913 4.2071C9.08366 4.67111 9.49819 4.98526 9.96591 4.98526H12.9183C13.9642 4.98526 14.399 6.38127 13.5529 7.02251L11.1644 8.8327C10.786 9.11947 10.6276 9.62778 10.7722 10.0918L11.6845 13.0207C12.0077 14.0583 10.8692 14.9211 10.0231 14.2798L7.63459 12.4696C7.25619 12.1829 6.74381 12.1829 6.36541 12.4696L3.97687 14.2798C3.13076 14.9211 1.99231 14.0583 2.3155 13.0207L3.22784 10.0918C3.37238 9.62778 3.21404 9.11947 2.83565 8.8327L0.447107 7.02251C-0.399009 6.38127 0.0358358 4.98526 1.08169 4.98526H4.03409C4.50181 4.98526 4.91634 4.67111 5.06087 4.2071L5.97322 1.27816Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <p>Рейтинг клиники</p>
+                        </div>
+                    </div>
+                    <div class="footer__searchBlock">
+                        <button class="footer__infoItem">
+                            <div class="footer__infoItem-iconBlock">
+                                <div class="footer__infoItem-absolute1">
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 7V3C7 1.89543 6.10457 1 5 1H1" stroke="#E51849" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="footer__infoItem-absolute2">
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1V5C1 6.10457 1.89543 7 3 7H7" stroke="#E51849" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0016 14.9996L13.6016 13.5996" stroke="#E51849" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.65 14.3C11.3227 14.3 14.3 11.3227 14.3 7.65C14.3 3.97731 11.3227 1 7.65 1C3.97731 1 1 3.97731 1 7.65C1 11.3227 3.97731 14.3 7.65 14.3Z" stroke="#472080" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p>Поиск по сайту</p>
+                        </button>
+                        <button class="footer__infoItem">
+                            <div class="footer__infoItem-iconBlock">
+                                <div class="footer__infoItem-absolute1">
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 7V3C7 1.89543 6.10457 1 5 1H1" stroke="#E51849" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="footer__infoItem-absolute2">
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1V5C1 6.10457 1.89543 7 3 7H7" stroke="#E51849" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 14.5C11.886 14.5 14.5759 12.8662 16.4481 10.0384C17.184 8.93082 17.184 7.06918 16.4481 5.96163C14.5759 3.13384 11.886 1.5 9 1.5C6.11395 1.5 3.42412 3.13384 1.55187 5.96163C0.816045 7.06918 0.816045 8.93082 1.55187 10.0384C3.42412 12.8662 6.11395 14.5 9 14.5Z" stroke="#472080" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.9281 8.00349C11.9281 9.55878 10.62 10.8156 9.00115 10.8156C7.38234 10.8156 6.07422 9.55878 6.07422 8.00349C6.07422 6.4482 7.38234 5.19141 9.00115 5.19141C10.62 5.19141 11.9281 6.4482 11.9281 8.00349Z" stroke="#E51849" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p>Версия для слабовидящих</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__info-left">
+                        <div class="footer__numbersBlock">
+                            <div class="footer__numbers">
+                                <div class="footer__numbers-item">
+                                    <div class="footer__numbers-item__key">Круглосуточный номер</div>
+                                    <a href="#" class="footer__numbers-item__value">8 (899) 000-00-00</a>
+                                </div>
+                                <div class="footer__numbers-item">
+                                    <div class="footer__numbers-item__key">Адрес call-центра</div>
+                                    <p class="footer__numbers-item__value">Улан-Удэ, ул. Кожевникова, д. 95</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__payBlock">
+                            <div class="footer__payBlock-title">Способы оплаты</div>
+                            <div class="footer__payBlock-items">
+                                <div class="footer__infoItem">
+                                    <div class="footer__infoItem-iconBlock">
+                                        <div class="footer__infoItem-absolute1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 9V3C9 1.89543 8.10457 1 7 1H1" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="footer__infoItem-absolute2">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V7C1 8.10457 1.89543 9 3 9H9" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.3252 0.650391C14.4687 0.643993 15.5938 0.933234 16.5859 1.48926C17.5781 2.04528 18.4026 2.84779 18.9756 3.81543C19.5486 4.78309 19.8496 5.88186 19.8496 7C19.8496 8.11814 19.5486 9.21691 18.9756 10.1846C18.4026 11.1522 17.5781 11.9547 16.5859 12.5107C15.5938 13.0668 14.4687 13.356 13.3252 13.3496C12.1819 13.3432 11.0607 13.0415 10.0752 12.4746L10 12.4316L9.9248 12.4746C8.93934 13.0415 7.81814 13.3432 6.6748 13.3496C5.53126 13.356 4.40624 13.0668 3.41406 12.5107C2.42192 11.9547 1.59744 11.1522 1.02441 10.1846C0.451402 9.21691 0.150391 8.11814 0.150391 7C0.150391 5.88186 0.451402 4.78309 1.02441 3.81543C1.59744 2.84779 2.42192 2.04528 3.41406 1.48926C4.40624 0.933234 5.53126 0.643993 6.6748 0.650391C7.81814 0.656819 8.93934 0.958483 9.9248 1.52539L10 1.56836L10.0752 1.52539C11.0607 0.958483 12.1819 0.656819 13.3252 0.650391ZM8.50781 2.48828C7.75389 2.18828 6.93622 2.07425 6.12695 2.15625C5.31752 2.23833 4.54074 2.51479 3.86523 2.95996C3.18968 3.4052 2.63595 4.00639 2.25293 4.71094C1.8699 5.41551 1.66895 6.20144 1.66895 7C1.66895 7.79856 1.8699 8.58449 2.25293 9.28906C2.63595 9.99361 3.18968 10.5948 3.86523 11.04C4.54074 11.4852 5.31752 11.7617 6.12695 11.8438C6.93622 11.9257 7.75389 11.8117 8.50781 11.5117L8.71191 11.4307L8.5625 11.2695C7.4756 10.1019 6.87465 8.5788 6.87695 7C6.87695 5.35687 7.51504 3.85806 8.5625 2.73047L8.71094 2.56934L8.50781 2.48828ZM13.873 2.15625C13.0638 2.07425 12.2461 2.18828 11.4922 2.48828L11.2881 2.56934L11.4375 2.73047C12.5244 3.89812 13.1254 5.4212 13.123 7L13.1162 7.30664C13.0422 8.82924 12.4194 10.2125 11.4375 11.2695L11.2891 11.4307L11.4922 11.5117C12.2461 11.8117 13.0638 11.9257 13.873 11.8438C14.6825 11.7617 15.4593 11.4852 16.1348 11.04C16.8103 10.5948 17.3641 9.99361 17.7471 9.28906C18.1301 8.58449 18.3311 7.79856 18.3311 7C18.3311 6.20144 18.1301 5.41551 17.7471 4.71094C17.3641 4.00639 16.8103 3.4052 16.1348 2.95996C15.4593 2.51479 14.6825 2.23833 13.873 2.15625ZM9.89648 3.5127C9.421 3.96561 9.04307 4.50748 8.78516 5.10645C8.52722 5.70557 8.39465 6.3496 8.39551 7C8.39551 8.36806 8.9711 9.60309 9.89648 10.4873L10 10.5859L10.1035 10.4873C10.579 10.0344 10.9569 9.49252 11.2148 8.89355C11.4728 8.29443 11.6053 7.6504 11.6045 7L11.5986 6.75684C11.5703 6.18957 11.4406 5.63078 11.2148 5.10645C10.9569 4.50748 10.579 3.96561 10.1035 3.5127L10 3.41406L9.89648 3.5127Z" fill="#472080" stroke="white" stroke-width="0.3"/>
+                                        </svg>
+                                    </div>
+                                    <p>Mastercard</p>
+                                </div>
+                                <div class="footer__infoItem">
+                                    <div class="footer__infoItem-iconBlock">
+                                        <div class="footer__infoItem-absolute1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 9V3C9 1.89543 8.10457 1 7 1H1" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="footer__infoItem-absolute2">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V7C1 8.10457 1.89543 9 3 9H9" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <svg width="27" height="9" viewBox="0 0 27 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.3686 0.161711L11.5654 8.8671H9.3832L11.1891 0.161711H13.3686ZM22.5483 5.78253L23.6961 2.51301L24.3578 5.78253H22.5483ZM24.9817 8.8671H27L25.2391 0.161711H23.3765C23.3738 0.161711 23.3702 0.161711 23.3675 0.161711C22.9543 0.161711 22.5996 0.422862 22.4502 0.79368L22.4475 0.800186L19.1751 8.8671H21.4653L21.9208 7.56598H24.7197L24.9817 8.8671ZM19.2876 6.02509C19.2966 3.72677 16.2097 3.60037 16.2313 2.57342C16.2385 2.26115 16.5257 1.92844 17.1559 1.84387C17.2729 1.83178 17.4079 1.82435 17.5448 1.82435C18.1848 1.82435 18.7916 1.97491 19.3318 2.24442L19.3074 2.23327L19.6901 0.386617C19.0842 0.144052 18.3829 0.0027881 17.6501 0H17.6492C15.4922 0 13.9753 1.18494 13.9618 2.87918C13.9483 4.13197 15.0448 4.82993 15.8721 5.24814C16.7229 5.67472 17.0082 5.94888 17.0037 6.329C16.9983 6.9145 16.3268 7.171 15.6984 7.18123C15.6696 7.18216 15.6345 7.18216 15.6003 7.18216C14.8162 7.18216 14.078 6.97862 13.4334 6.61896L13.4577 6.63104L13.0625 8.5381C13.7701 8.83085 14.5902 9 15.449 9C15.4625 9 15.476 9 15.4895 9H15.4877C17.7797 9 19.2786 7.83178 19.2867 6.0223L19.2876 6.02509ZM10.251 0.161711L6.71669 8.8671H4.41028L2.67101 1.91822C2.6377 1.57993 2.43695 1.2974 2.15788 1.15613L2.15247 1.15335C1.53311 0.839219 0.812917 0.583643 0.0594159 0.422862L0 0.41264L0.052214 0.160781H3.7648C4.27074 0.160781 4.69115 0.542751 4.76947 1.04182L4.77037 1.0474L5.68952 6.0855L7.95992 0.159851L10.251 0.161711Z" fill="#472080"/>
+                                        </svg>
+                                    </div>
+                                    <p>VISA</p>
+                                </div>
+                                <div class="footer__infoItem">
+                                    <div class="footer__infoItem-iconBlock">
+                                        <div class="footer__infoItem-absolute1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 9V3C9 1.89543 8.10457 1 7 1H1" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="footer__infoItem-absolute2">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V7C1 8.10457 1.89543 9 3 9H9" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.975 5.94118V10.0588M15.025 5.94118V10.0588M13.75 15H5.25C2.7 15 1 13.7647 1 10.8824V5.11765C1 2.23529 2.7 1 5.25 1H13.75C16.3 1 18 2.23529 18 5.11765V10.8824C18 13.7647 16.3 15 13.75 15ZM12.05 8C12.05 9.36447 10.9083 10.4706 9.5 10.4706C8.09167 10.4706 6.95 9.36447 6.95 8C6.95 6.63553 8.09167 5.52941 9.5 5.52941C10.9083 5.52941 12.05 6.63553 12.05 8Z" stroke="#472080" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p>Наличные</p>
+                                </div>
+                                <div class="footer__infoItem">
+                                    <div class="footer__infoItem-iconBlock">
+                                        <div class="footer__infoItem-absolute1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 9V3C9 1.89543 8.10457 1 7 1H1" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="footer__infoItem-absolute2">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V7C1 8.10457 1.89543 9 3 9H9" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 6.6V4.6C1 2.608 2.608 1 4.6 1H6.6M11.4 1H13.4C15.392 1 17 2.608 17 4.6V6.6M17 12.2V13.4C17 15.392 15.392 17 13.4 17H12.2M6.6 17H4.6C2.608 17 1 15.392 1 13.4V11.4M7.8 5V6.6C7.8 7.4 7.4 7.8 6.6 7.8H5C4.2 7.8 3.8 7.4 3.8 6.6V5C3.8 4.2 4.2 3.8 5 3.8H6.6C7.4 3.8 7.8 4.2 7.8 5ZM14.2 5V6.6C14.2 7.4 13.8 7.8 13 7.8H11.4C10.6 7.8 10.2 7.4 10.2 6.6V5C10.2 4.2 10.6 3.8 11.4 3.8H13C13.8 3.8 14.2 4.2 14.2 5ZM7.8 11.4V13C7.8 13.8 7.4 14.2 6.6 14.2H5C4.2 14.2 3.8 13.8 3.8 13V11.4C3.8 10.6 4.2 10.2 5 10.2H6.6C7.4 10.2 7.8 10.6 7.8 11.4ZM14.2 11.4V13C14.2 13.8 13.8 14.2 13 14.2H11.4C10.6 14.2 10.2 13.8 10.2 13V11.4C10.2 10.6 10.6 10.2 11.4 10.2H13C13.8 10.2 14.2 10.6 14.2 11.4Z" stroke="#472080" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p>QR-код</p>
+                                </div>
+                                <div class="footer__infoItem">
+                                    <div class="footer__infoItem-iconBlock">
+                                        <div class="footer__infoItem-absolute1">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 9V3C9 1.89543 8.10457 1 7 1H1" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="footer__infoItem-absolute2">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1V7C1 8.10457 1.89543 9 3 9H9" stroke="#472080" stroke-width="1.2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.95703 1.75879C6.95703 1.44859 7.29491 1.25654 7.56152 1.41504L13.249 4.79688C13.5094 4.95192 13.5093 5.3292 13.249 5.48438L8.2959 8.43164L8.00195 8.60645L8.00293 8.94824V9.04883L8.00391 9.38867L8.2959 9.5625L13.2432 12.5117C13.5031 12.667 13.5023 13.0442 13.2422 13.1992L7.56348 16.584C7.2969 16.7429 6.95813 16.5505 6.95801 16.2402L6.95703 10.2812V9.22363L6.0498 9.7666L1.20703 12.6602C0.940541 12.8193 0.602791 12.6278 0.602539 12.3174L0.600586 5.67871C0.600573 5.36839 0.938475 5.17624 1.20508 5.33496L6.0498 8.22363L6.95703 8.76465V1.75879Z" stroke="#472080" stroke-width="1.2"/>
+                                        </svg>
+                                    </div>
+                                    <p>СБП</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__info-right">
+                        <button class="primary-btn">Заказать звонок</button>
+                        <div class="footer__numbers-item">
+                            <div class="footer__numbers-item__key">Адрес call-центра</div>
+                            <p class="footer__numbers-item__value">Улан-Удэ, ул. Кожевникова, д. 95</p>
+                        </div>
+                        <div class="footer__payBlock socials">
+                            <div class="footer__payBlock-title">Социальные сети</div>
+                            <div class="header__infoBlock-socials">
+                                <a href="#" class="white">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.18407 11.2696C2.8934 11.1409 1.72919 10.8352 0.732735 10.0864C0.608811 9.9931 0.480671 9.90302 0.368549 9.79926C-0.0681376 9.39709 -0.111975 8.9354 0.233665 8.46084C0.528723 8.05385 1.02442 7.94526 1.53951 8.17932C1.63899 8.22356 1.7334 8.28067 1.82529 8.34099C3.68248 9.5668 6.23431 9.60059 8.09823 8.39649C8.2837 8.25976 8.48097 8.14876 8.70943 8.09245C9.15454 7.98306 9.56931 8.13991 9.80789 8.51393C10.081 8.94023 10.0777 9.35848 9.74129 9.68906C9.2262 10.1982 8.60573 10.5658 7.91698 10.8224C7.26533 11.0653 6.55129 11.1875 5.84567 11.268C5.9519 11.3798 6.00248 11.4345 6.06908 11.4988C7.02759 12.4238 7.99117 13.3464 8.94716 14.2746C9.27256 14.5915 9.34085 14.9832 9.16129 15.3516C8.96486 15.7538 8.52649 16.0184 8.09571 15.9902C7.82341 15.9717 7.61097 15.8414 7.42129 15.6589C6.69797 14.9591 5.96117 14.2722 5.25219 13.5595C5.04564 13.352 4.94617 13.3914 4.76407 13.5716C4.03655 14.2915 3.29721 15.0001 2.55198 15.7055C2.21814 16.0216 1.82024 16.0787 1.43244 15.8986C1.02105 15.7055 0.758026 15.3025 0.779101 14.8963C0.79259 14.6213 0.933375 14.4121 1.1298 14.2239C2.07848 13.3123 3.02576 12.4008 3.97163 11.4892C4.03402 11.428 4.09303 11.3637 4.18407 11.2696Z" fill="#472080"/>
+                                        <path d="M4.97062 8.09889C2.66747 8.09085 0.779101 6.25696 0.791747 4.0402C0.805235 1.79932 2.69529 -0.00561723 5.0212 1.31369e-05C7.35132 0.0056435 9.22198 1.83792 9.21103 4.10214C9.19838 6.31406 7.29736 8.10613 4.97062 8.09889ZM7.06384 4.04503C7.0654 3.786 7.01328 3.52923 6.91049 3.28947C6.8077 3.04972 6.65625 2.83172 6.46487 2.648C6.27348 2.46427 6.04592 2.31845 5.79527 2.2189C5.54463 2.11936 5.27583 2.06807 5.00434 2.06797C4.73029 2.06771 4.45893 2.11956 4.20612 2.22048C3.95331 2.32141 3.72411 2.46938 3.5319 2.65576C3.3397 2.84214 3.18834 3.06319 3.08667 3.30601C2.98501 3.54882 2.93507 3.80853 2.93977 4.06996C2.9401 4.3291 2.99414 4.58561 3.09879 4.82474C3.20344 5.06386 3.35663 5.28088 3.54954 5.46329C3.74244 5.6457 3.97127 5.78991 4.22282 5.88761C4.47438 5.9853 4.74371 6.03456 5.0153 6.03255C5.28685 6.0315 5.55551 5.97917 5.80576 5.87856C6.05601 5.77795 6.2829 5.63106 6.47335 5.44636C6.6638 5.26166 6.81403 5.04281 6.91538 4.80243C7.01673 4.56205 7.06718 4.30491 7.06384 4.04583V4.04503Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="white">
+                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4502 0.088937C13.6346 0.010188 13.8365 -0.0169719 14.0347 0.0102836C14.233 0.0375392 14.4205 0.118214 14.5776 0.243911C14.7347 0.369609 14.8558 0.535733 14.9281 0.724994C15.0005 0.914254 15.0215 1.11973 14.9891 1.32004L13.2964 11.736C13.1322 12.7407 12.0456 13.3169 11.1373 12.8164C10.3776 12.3977 9.24916 11.7526 8.23417 11.0795C7.72668 10.7426 6.17211 9.66368 6.36316 8.89594C6.52735 8.2395 9.13945 5.77275 10.6321 4.30618C11.2179 3.73 10.9508 3.39762 10.2589 3.92762C8.54091 5.24352 5.78253 7.24463 4.87054 7.80794C4.06601 8.30462 3.64658 8.38942 3.14506 8.30462C2.23008 8.15016 1.38152 7.91091 0.688939 7.61941C-0.246939 7.2257 -0.201414 5.9204 0.688193 5.54031L13.4502 0.088937Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="white">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.43349 8.46546H2.51424V6.09391H8.43349C8.77925 6.09391 9.01966 6.15493 9.14031 6.26149C9.26096 6.36804 9.33571 6.56567 9.33571 6.85437V7.70591C9.33571 8.0101 9.26096 8.20773 9.14031 8.31429C9.01966 8.42084 8.77925 8.46637 8.43349 8.46637V8.46546ZM8.83958 3.85806H0.00390625V14H2.51424V10.7004H7.14051L9.33571 14H12.1468L9.72648 10.6849C10.6188 10.551 11.0195 10.2742 11.3499 9.8179C11.6803 9.36163 11.846 8.63213 11.846 7.65856V6.89809C11.846 6.32069 11.7857 5.8644 11.6803 5.51469C11.575 5.16496 11.3949 4.86077 11.1392 4.58756C10.8691 4.3289 10.5683 4.14676 10.2073 4.02471C9.84624 3.91816 9.39512 3.85714 8.83958 3.85714V3.85806Z" fill="#472080"/>
+                                        <path d="M14.0753 3.85714C15.1405 3.85714 16.0039 2.99369 16.0039 1.92857C16.0039 0.863451 15.1405 0 14.0753 0C13.0102 0 12.1468 0.863451 12.1468 1.92857C12.1468 2.99369 13.0102 3.85714 14.0753 3.85714Z" fill="#472080"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="white">
+                                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.614 0.677143C16.7316 0.287143 16.614 0 16.0509 0H14.1915C13.7184 0 13.5002 0.247857 13.3819 0.521429C13.3819 0.521429 12.4363 2.80429 11.0969 4.28714C10.6634 4.71714 10.4665 4.85357 10.2299 4.85357C10.1116 4.85357 9.93382 4.71714 9.93382 4.32643V0.677143C9.93382 0.208571 9.80349 0 9.40967 0H6.48573C6.19036 0 6.01257 0.217143 6.01257 0.423571C6.01257 0.867143 6.68264 0.97 6.75135 2.21857V4.93143C6.75135 5.52643 6.64297 5.63429 6.4064 5.63429C5.77599 5.63429 4.24248 3.34071 3.33229 0.716428C3.15592 0.205714 2.97743 0 2.50215 0H0.641393C0.110154 0 0.00390625 0.247857 0.00390625 0.521429C0.00390625 1.00857 0.63431 3.42857 2.93989 6.62929C4.47694 8.815 6.64085 10 8.6121 10C9.79428 10 9.9402 9.73714 9.9402 9.28357V7.63143C9.9402 7.105 10.0521 7 10.4268 7C10.7031 7 11.1755 7.13714 12.2791 8.19071C13.5399 9.44 13.7474 10 14.4571 10H16.3165C16.8477 10 17.114 9.73714 16.9611 9.21714C16.7925 8.7 16.1904 7.94929 15.3921 7.05857C14.9586 6.55143 14.3084 6.005 14.1108 5.73143C13.8352 5.38071 13.9139 5.22429 14.1108 4.91214C14.1108 4.91214 16.3774 1.75071 16.6133 0.677143" fill="#472080"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__services">
+                <div class="footer__services-title">Услуги</div>
+                <div class="footer__services-inner">
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__services-item">
+                        <div class="footer__services-name question">
+                            Вывод из запоя
+                            <div class="footer__services-arr">
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L4.00049 4L7 1" stroke="#E51849" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <ul class="footer__services-list answer">
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                            <li class="footer__services-listItem">
+                                <a href="#" class="footer__services-link">Вывод из запоя</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-links">
+                    <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__bottom-link">Согласие на обработку с помощью сервиса Яндекс.Метрика</a>
+                    <a href="#" class="footer__bottom-link">Согласие на обработку персональных данных</a>
+                    <a href="#" class="footer__bottom-link">Политика обработки персональных данных</a>
+                    <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
+                    <a href="#" class="footer__bottom-link">Карта сайта</a>
+                </div>
+                <div class="footer__bottom-info">
+                    <p>Все права защищены © 2025 skoraya-narkology03.ru</p>
+                    <p>Вся информация на сайте не является публичной офертой, несёт сугубо информационный характер, и не служит для постановки диагноза и назначения лечения.</p>
+                    <p>Есть противопоказания, необходимо проконсультироваться с врачом. Консультационные услуги, оказываемые по телефону, мессенджерам и в соцсетях носят исключительно информационный характер и не являются медицинскими услугами.</p>
+                    <p>Оставаясь на сайте вы соглашаетесь на использование cookies. 18+</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
