@@ -39,7 +39,9 @@ function InitFAQItems(FAQItems) {
       question.addEventListener("click", () => {
         const questionBlock = question.querySelector(".question");
         const answerBlock = question.querySelector(".answer");
-
+        answerBlock.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
         questionBlock.classList.toggle("opened");
         answerBlock.classList.toggle("opened");
 
@@ -56,6 +58,52 @@ function InitFAQItems(FAQItems) {
   }
 }
 
+function InitShowMoreItems(sectionContainer) {
+  //Функция принимает контейнер (селектор) (весь блок где будет уже контейнер с элементами). Внутри контейнера должен быть блок showMore, а item внутри него должны быть show-item.
+  //у showMore блока долен быть дата атрибут count с количеством показываемых элементов
+
+  console.log(sectionContainer);
+  if (sectionContainer) {
+    const itemsContainer = sectionContainer.querySelector(".showMore");
+    const viewCount = itemsContainer.dataset.count;
+    const items = itemsContainer.querySelectorAll(".show-item");
+    const moreBtn = sectionContainer.querySelector(".moreBtn");
+    if (
+      sectionContainer &&
+      itemsContainer &&
+      viewCount &&
+      items.length &&
+      moreBtn
+    ) {
+      if (items.length > viewCount) {
+        items.forEach((item, index) => {
+          if (index > viewCount - 1) {
+            item.classList.add("hidden");
+          }
+        });
+
+        moreBtn.addEventListener("click", () => {
+          const hiddenItems =
+            itemsContainer.querySelectorAll(".show-item.hidden");
+          if (hiddenItems.length) {
+            hiddenItems.forEach((hiddenItem, index) => {
+              if (index < viewCount - 1) {
+                hiddenItem.classList.remove("hidden");
+              }
+            });
+          }
+          const updateHiddenItems =
+            itemsContainer.querySelectorAll(".show-item.hidden");
+          if (!updateHiddenItems.length) {
+            moreBtn.remove();
+          }
+        });
+      } else {
+        moreBtn.remove();
+      }
+    }
+  }
+}
 document.addEventListener("DOMContentLoaded", () => {
   const headerServicesBtn = document.querySelector(".servicesItem");
   const headerServicesMenu = document.querySelector(".header__servicesMenu");
@@ -119,6 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const submenuItem = document.querySelector('.header__nav-item.subitem')
+  if(submenuItem){
+    submenuItem.addEventListener('click', () =>{
+      submenuItem.querySelector('.header__submenu').classList.toggle('active')
+      submenuItem.classList.toggle('active')
+    })
+  }
+
   InitFAQItems(document.querySelectorAll(".footer__services-item"));
 
   InitFAQItems(document.querySelectorAll(".prices__item-titleBlock"));
@@ -127,7 +183,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   InitFAQItems(document.querySelectorAll(".textWithPanel__services-item"));
   InitFAQItems(document.querySelectorAll(".faqBlock__faq"));
+  InitFAQItems(document.querySelectorAll(".pricesPage__item"));
   InitTabs(".prices");
+
+  InitShowMoreItems(document.querySelector(".gallerySubCategory"));
 
   const howFastSelects = document.querySelectorAll(".howFast__formBlock-input");
 
@@ -211,50 +270,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const filters = document.querySelectorAll(".filters-container input");
 
-  const filtersItems = document.querySelectorAll(
-    ".filtersItems .doctors__item"
-  );
+  const filtersItems = document.querySelectorAll(".filtersItems .fitlerItem");
 
   if (filters.length && filtersItems.length) {
     filters.forEach((filter) => {
-      filter.addEventListener('click' , () =>{
-        const activeNames = []
-       filters.forEach((filter) =>{
-        if(filter.checked){
-          activeNames.push(filter.getAttribute('name'))
-        }
-       })
-
-       if(activeNames.includes("all")){
-        filtersItems.forEach((item) =>{
-          item.classList.add('visible')
-        })
-       } else{
-        filtersItems.forEach((item) =>{
-          item.classList.remove('visible')
-          if(activeNames.includes(item.getAttribute("data-cat"))){
-            item.classList.add('visible')
+      filter.addEventListener("click", () => {
+        const activeNames = [];
+        filters.forEach((filter) => {
+          if (filter.checked) {
+            activeNames.push(filter.getAttribute("name"));
           }
-        })
-       }
+        });
 
-       console.log(activeNames)
-      })
-    })
-   
+        if (activeNames.includes("all")) {
+          filtersItems.forEach((item) => {
+            item.classList.add("visible");
+          });
+        } else {
+          filtersItems.forEach((item) => {
+            item.classList.remove("visible");
+            if (activeNames.includes(item.getAttribute("data-cat"))) {
+              item.classList.add("visible");
+            }
+          });
+        }
+
+        console.log(activeNames);
+      });
+    });
   }
-  const mobileFilterSelect = document.querySelector('.mobile-filtersSelect')
-  const filterContainer = document.querySelector('.filters-container')
-  if(mobileFilterSelect && filterContainer){
-    mobileFilterSelect.addEventListener('click', () =>{
-      mobileFilterSelect.classList.toggle('active')
-      filterContainer.classList.toggle('active')
-      if(filterContainer.classList.contains('active')){
-        filterContainer.style.height =`${filterContainer.scrollHeight+20}px`
-      } else{
-        filterContainer.style.height ="0"
+  const mobileFilterSelect = document.querySelector(".mobile-filtersSelect");
+  const filterContainer = document.querySelector(".filters-container");
+  if (mobileFilterSelect && filterContainer) {
+    mobileFilterSelect.addEventListener("click", () => {
+      mobileFilterSelect.classList.toggle("active");
+      filterContainer.classList.toggle("active");
+      if (filterContainer.classList.contains("active")) {
+        filterContainer.style.height = `${filterContainer.scrollHeight + 20}px`;
+      } else {
+        filterContainer.style.height = "0";
       }
-    })
+    });
   }
 });
 
@@ -408,6 +464,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const reviewsSlider = new Swiper(".reviews__slider", {
     slidesPerView: 1.1,
     spaceBetween: 10,
+    navigation: {
+      nextEl: ".reviews__information-sliderButton.next",
+      prevEl: ".reviews__information-sliderButton.prev",
+    },
     breakpoints: {
       1201: {
         slidesPerView: 2,
@@ -502,6 +562,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const licensesSlider = new Swiper(".reviews__licensesSlider", {
+    slidesPerView: 1.1,
+    spaceBetween: 10,
+    breakpoints: {
+      850: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1700: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  const articlesSlider = new Swiper(".articlesSlider__slider", {
     slidesPerView: 1.1,
     spaceBetween: 10,
     breakpoints: {
@@ -667,3 +746,91 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+let scrollWidthFunc = () => {
+  let scrollWidth = window.innerWidth - document.body.clientWidth;
+  document.querySelector("html").style.paddingRight = scrollWidth + "px";
+  //document.querySelector('header').style.paddingRight = scrollWidth + 'px';
+};
+// Popups
+function popupClose(popupActive) {
+  popupActive.classList.remove("open");
+  setTimeout(() => {
+    if (!popupActive.classList.contains("open")) {
+      popupActive.classList.remove("active");
+    }
+  }, 400);
+  document.body.classList.remove("lock");
+  document.querySelector("html").style.paddingRight = 0;
+  document.querySelector("html").classList.remove("lock");
+  document.querySelector("header").removeAttribute("style");
+}
+const popupOpenBtns = document.querySelectorAll(".popup-btn");
+const popups = document.querySelectorAll(".popup");
+const originalTitlePopup2 =
+  document.querySelector(".original-title")?.innerHTML;
+const closePopupBtns = document.querySelectorAll(".close-popup-btn");
+closePopupBtns.forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    popupClose(e.target.closest(".popup"));
+  });
+});
+popupOpenBtns.forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    const path = e.currentTarget.dataset.path;
+    const currentPopup = document.querySelector(`[data-target="${path}"]`);
+    if (currentPopup) {
+      popups.forEach(function (popup) {
+        popupClose(popup);
+        popup.addEventListener("click", function (e) {
+          if (!e.target.closest(".popup__content")) {
+            popupClose(e.target.closest(".popup"));
+          }
+        });
+      });
+      currentPopup.classList.add("active");
+      setTimeout(() => {
+        currentPopup.classList.add("open");
+      }, 10);
+      if (currentPopup.getAttribute("data-target") == "popup-change") {
+        let originaTitle = currentPopup.querySelector(".original-title");
+        if (el.classList.contains("change-item__btn")) {
+          if (el.classList.contains("doctor__btn-js")) {
+            let currentItem = el.closest(".change-item");
+            let currentTitile = currentItem.querySelector(
+              ".change-item__title"
+            );
+            originaTitle.innerHTML =
+              "Записаться на приём к врачу: " + currentTitile.innerHTML;
+          } else {
+            if (el.classList.contains("change-item__btn_current")) {
+              originaTitle.textContent = el.textContent;
+            } else {
+              let currentItem = el.closest(".change-item");
+              let currentTitile = currentItem.querySelector(
+                ".change-item__title"
+              );
+              originaTitle.innerHTML = currentTitile.innerHTML;
+            }
+          }
+        } else {
+          originaTitle.innerHTML = originalTitlePopup2;
+        }
+      }
+
+      if (currentPopup.getAttribute("data-target") == "popup-jobs") {
+        let currentItems = el.closest(".jobs__items");
+        let originalText = currentPopup.querySelector(".jobs__inner_original");
+        if (originalText && currentItems.querySelector(".jobs__inner")) {
+          originalText.innerHTML =
+            currentItems.querySelector(".jobs__inner").innerHTML;
+        }
+      }
+      e.stopPropagation();
+      scrollWidthFunc();
+      document.querySelector("html").classList.add("lock");
+    }
+  });
+});
+// end popups
